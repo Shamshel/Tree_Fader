@@ -1,14 +1,4 @@
 Version 3.2 HI-TECH Software Intermediate Code
-"1609 C:\Program Files (x86)\Microchip\xc8\v1.34\include\pic12lf1822.h
-[v _OSCCON `Vuc ~T0 @X0 0 e@153 ]
-"1686
-[s S90 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S90 . HFIOFS LFIOFR MFIOFR HFIOFL HFIOFR OSTS PLLR T1OSCR ]
-"1685
-[u S89 `S90 1 ]
-[n S89 . . ]
-"1697
-[v _OSCSTATbits `VS89 ~T0 @X0 0 e@154 ]
 [; ;htc.h: 26: extern const char __xc8_OPTIM_SPEED;
 [; ;xc8debug.h: 14: extern void __builtin_software_breakpoint(void);
 [; ;pic12lf1822.h: 49: extern volatile unsigned char INDF0 @ 0x000;
@@ -2160,26 +2150,16 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;stdint.h: 210: typedef int16_t intptr_t;
 [; ;stdint.h: 215: typedef uint16_t uintptr_t;
 [; ;stdbool.h: 12: typedef unsigned char bool;
-[; ;system.h: 19: void ConfigureOscillator(void);
-"18 system.c
-[v _ConfigureOscillator `(v ~T0 @X0 1 ef ]
-"19
+[v F2211 `(v ~T0 @X0 1 tf ]
+"23 interrupts.c
+[v _isr `IF2211 ~T0 @X0 1 e ]
+"24
 {
-[; ;system.c: 18: void ConfigureOscillator(void)
-[; ;system.c: 19: {
-[e :U _ConfigureOscillator ]
+[; ;interrupts.c: 23: void interrupt isr(void)
+[; ;interrupts.c: 24: {
+[e :U _isr ]
 [f ]
-[; ;system.c: 37: OSCCON = 0b01011010;
-"37
-[e = _OSCCON -> -> 90 `i `uc ]
-[; ;system.c: 42: while(OSCSTATbits.HFIOFR != 1);
-"42
-[e $U 271  ]
-[e :U 272 ]
-[e :U 271 ]
-[e $ != -> . . _OSCSTATbits 0 4 `i -> 1 `i 272  ]
-[e :U 273 ]
-[; ;system.c: 50: }
+[; ;interrupts.c: 50: }
 "50
 [e :UE 270 ]
 }

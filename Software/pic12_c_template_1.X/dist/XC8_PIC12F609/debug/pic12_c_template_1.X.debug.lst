@@ -1,7 +1,7 @@
 
 
 Microchip Technology PIC LITE Macro Assembler V1.34 build -361300703 
-                                                                                               Mon May 11 12:15:21 2015
+                                                                                               Mon May 11 12:04:48 2015
 
 Microchip Technology Omniscient Code Generator (Lite mode) build 201502162209
      1                           	processor	12LF1822
@@ -1046,7 +1046,7 @@ Auto Spaces:
     Space          Size  Autos    Used
     COMMON           14      8       8
     BANK0            80      0       0
-    BANK1            32      0       0
+    BANK1            16      0       0
 
 Pointer List with Targets:
 
@@ -1110,7 +1110,7 @@ Call Graph Tables:
 
  Address spaces:
 Name               Size   Autos  Total    Cost      Usage
-BIGRAM              70      0       0       0        0.0%
+BIGRAM              60      0       0       0        0.0%
 EEDATA             100      0       0       0        0.0%
 NULL                 0      0       0       0        0.0%
 CODE                 0      0       0       0        0.0%
@@ -1132,10 +1132,10 @@ SFR4                 0      0       0       5        0.0%
 BANK0               50      0       0       6        0.0%
 BITSFR5              0      0       0       6        0.0%
 SFR5                 0      0       0       6        0.0%
-BITBANK1            20      0       0       7        0.0%
+BITBANK1            10      0       0       7        0.0%
 BITSFR6              0      0       0       7        0.0%
 SFR6                 0      0       0       7        0.0%
-BANK1               20      0       0       8        0.0%
+BANK1               10      0       0       8        0.0%
 BITSFR7              0      0       0       8        0.0%
 SFR7                 0      0       0       8        0.0%
 BITSFR8              0      0       0       9        0.0%
@@ -1190,18 +1190,18 @@ SFR31                0      0       0      32        0.0%
 
 
 Microchip Technology PIC Macro Assembler V1.34 build -361300703 
-Symbol Table                                                                                   Mon May 11 12:15:21 2015
+Symbol Table                                                                                   Mon May 11 12:04:48 2015
 
                  __CFG_CP$OFF 0000                            l33 0065                            l19 002C  
                           u25 0028                   __CFG_LVP$ON 0000                           l549 001E  
                          l567 0048                  __CFG_CPD$OFF 0000                           _isr 0004  
                 __CFG_BORV$LO 0000                  __CFG_IESO$ON 0000                          ?_isr 0070  
-                        _TMR0 0015                  __CFG_WRT$OFF 0000                 __CFG_FCMEN$ON 0000  
-                        _main 000E                          btemp 007E                 __CFG_BOREN$ON 0000  
-                        ltemp 007E                          start 000B                          ttemp 007E  
-                        wtemp 007E                 __CFG_MCLRE$ON 0000               __end_of_InitApp 0062  
-                       ??_isr 0070                 __CFG_PLLEN$ON 0000                         ?_main 0070  
-               __CFG_WDTE$OFF 0000           _ConfigureOscillator 0062             main@red_direction 0074  
+                __CFG_WDTE$ON 0000                          _TMR0 0015                  __CFG_WRT$OFF 0000  
+               __CFG_FCMEN$ON 0000                          _main 000E                          btemp 007E  
+               __CFG_BOREN$ON 0000                          ltemp 007E                          start 000B  
+                        ttemp 007E                          wtemp 007E                 __CFG_MCLRE$ON 0000  
+             __end_of_InitApp 0062                         ??_isr 0070                 __CFG_PLLEN$ON 0000  
+                       ?_main 0070           _ConfigureOscillator 0062             main@red_direction 0074  
                        ltemp0 007E                         ltemp1 0082                         ltemp2 0086  
                        ltemp3 0080                         ttemp0 007E                         ttemp1 0081  
                        ttemp2 0084                         ttemp3 0087                         ttemp4 007F  

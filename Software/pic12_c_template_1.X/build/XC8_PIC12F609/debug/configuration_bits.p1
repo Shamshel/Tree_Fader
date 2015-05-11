@@ -1,14 +1,4 @@
 Version 3.2 HI-TECH Software Intermediate Code
-"1609 C:\Program Files (x86)\Microchip\xc8\v1.34\include\pic12lf1822.h
-[v _OSCCON `Vuc ~T0 @X0 0 e@153 ]
-"1686
-[s S90 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S90 . HFIOFS LFIOFR MFIOFR HFIOFL HFIOFR OSTS PLLR T1OSCR ]
-"1685
-[u S89 `S90 1 ]
-[n S89 . . ]
-"1697
-[v _OSCSTATbits `VS89 ~T0 @X0 0 e@154 ]
 [; ;htc.h: 26: extern const char __xc8_OPTIM_SPEED;
 [; ;xc8debug.h: 14: extern void __builtin_software_breakpoint(void);
 [; ;pic12lf1822.h: 49: extern volatile unsigned char INDF0 @ 0x000;
@@ -2131,55 +2121,33 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;pic.h: 184: extern unsigned char __resetbits;
 [; ;pic.h: 185: extern __bit __powerdown;
 [; ;pic.h: 186: extern __bit __timeout;
-[; ;stdint.h: 13: typedef signed char int8_t;
-[; ;stdint.h: 20: typedef signed int int16_t;
-[; ;stdint.h: 28: typedef signed short long int int24_t;
-[; ;stdint.h: 36: typedef signed long int int32_t;
-[; ;stdint.h: 43: typedef unsigned char uint8_t;
-[; ;stdint.h: 49: typedef unsigned int uint16_t;
-[; ;stdint.h: 56: typedef unsigned short long int uint24_t;
-[; ;stdint.h: 63: typedef unsigned long int uint32_t;
-[; ;stdint.h: 71: typedef signed char int_least8_t;
-[; ;stdint.h: 78: typedef signed int int_least16_t;
-[; ;stdint.h: 90: typedef signed short long int int_least24_t;
-[; ;stdint.h: 98: typedef signed long int int_least32_t;
-[; ;stdint.h: 105: typedef unsigned char uint_least8_t;
-[; ;stdint.h: 111: typedef unsigned int uint_least16_t;
-[; ;stdint.h: 121: typedef unsigned short long int uint_least24_t;
-[; ;stdint.h: 128: typedef unsigned long int uint_least32_t;
-[; ;stdint.h: 137: typedef signed char int_fast8_t;
-[; ;stdint.h: 144: typedef signed int int_fast16_t;
-[; ;stdint.h: 156: typedef signed short long int int_fast24_t;
-[; ;stdint.h: 164: typedef signed long int int_fast32_t;
-[; ;stdint.h: 171: typedef unsigned char uint_fast8_t;
-[; ;stdint.h: 177: typedef unsigned int uint_fast16_t;
-[; ;stdint.h: 187: typedef unsigned short long int uint_fast24_t;
-[; ;stdint.h: 194: typedef unsigned long int uint_fast32_t;
-[; ;stdint.h: 200: typedef int32_t intmax_t;
-[; ;stdint.h: 205: typedef uint32_t uintmax_t;
-[; ;stdint.h: 210: typedef int16_t intptr_t;
-[; ;stdint.h: 215: typedef uint16_t uintptr_t;
-[; ;stdbool.h: 12: typedef unsigned char bool;
-[; ;system.h: 19: void ConfigureOscillator(void);
-"18 system.c
-[v _ConfigureOscillator `(v ~T0 @X0 1 ef ]
-"19
-{
-[; ;system.c: 18: void ConfigureOscillator(void)
-[; ;system.c: 19: {
-[e :U _ConfigureOscillator ]
-[f ]
-[; ;system.c: 37: OSCCON = 0b01011010;
-"37
-[e = _OSCCON -> -> 90 `i `uc ]
-[; ;system.c: 42: while(OSCSTATbits.HFIOFR != 1);
-"42
-[e $U 271  ]
-[e :U 272 ]
-[e :U 271 ]
-[e $ != -> . . _OSCSTATbits 0 4 `i -> 1 `i 272  ]
-[e :U 273 ]
-[; ;system.c: 50: }
+"44 configuration_bits.c
+[p x FOSC=INTOSC ]
+"45
+[p x WDTE=ON ]
+"46
+[p x PWRTE=OFF ]
+"47
+[p x MCLRE=ON ]
+"48
+[p x CP=OFF ]
+"49
+[p x CPD=OFF ]
 "50
-[e :UE 270 ]
-}
+[p x BOREN=ON ]
+"51
+[p x CLKOUTEN=OFF ]
+"52
+[p x IESO=ON ]
+"53
+[p x FCMEN=ON ]
+"56
+[p x WRT=OFF ]
+"57
+[p x PLLEN=ON ]
+"58
+[p x STVREN=ON ]
+"59
+[p x BORV=LO ]
+"60
+[p x LVP=ON ]

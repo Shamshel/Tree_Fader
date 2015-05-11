@@ -11,11 +11,11 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
-$C:\Users\cody\AppData\Local\Temp\sbb8.obj
-reset_vec CODE 0 0 0 1 2
+$C:\Users\cody\AppData\Local\Temp\s79k.obj
+reset_vec CODE 0 0 0 2 2
 end_init CODE 0 B B 1 2
 config CONFIG 0 8007 8007 2 2
-$dist/XC8_PIC12F609/production\pic12_c_template_1.X.production.obj
+$dist/XC8_PIC12F609/debug\pic12_c_template_1.X.debug.obj
 cinit CODE 0 C C 2 2
 text1 CODE 0 51 51 11 2
 text2 CODE 0 62 62 6 2
@@ -29,12 +29,12 @@ intentry CODE 0 4 4 7 2
 # Addresses given in the range are in hexadecimal and units of delta.
 %UNUSED
 RAM 20-6F 1
-RAM A0-BF 1
+RAM A0-AF 1
 BANK0 20-6F 1
-BANK1 A0-BF 1
-CONST 1-3 2
+BANK1 A0-AF 1
+CONST 2-3 2
 CONST 68-7FF 2
-ENTRY 1-3 2
+ENTRY 2-3 2
 ENTRY 68-7FF 2
 IDLOC 8000-8003 2
 SFR10 500-56F 1
@@ -59,8 +59,8 @@ SFR28 E00-E6F 1
 SFR29 E80-EEF 1
 SFR30 F00-F6F 1
 SFR31 F80-FEF 1
-STACK 2000-206F 1
-CODE 1-3 2
+STACK 2000-205F 1
+CODE 2-3 2
 CODE 68-7FF 2
 SFR0 0-1F 1
 SFR1 80-9F 1
@@ -72,12 +72,12 @@ SFR6 300-36F 1
 SFR7 380-3EF 1
 SFR8 400-46F 1
 SFR9 480-4EF 1
-BIGRAM 2000-206F 1
+BIGRAM 2000-205F 1
 COMMON 78-7D 1
 EEDATA F000-F0FF 2
-STRCODE 1-3 2
+STRCODE 2-3 2
 STRCODE 68-7FF 2
-STRING 1-3 2
+STRING 2-3 2
 STRING 68-7FF 2
 # %LINETAB Section
 # This section enumerates the file/line to address mappings.
@@ -92,15 +92,15 @@ STRING 68-7FF 2
 # are in ascending order of addresses.
 # All other numeric values are in decimal.
 %LINETAB
-$dist/XC8_PIC12F609/production\pic12_c_template_1.X.production.obj
+$dist/XC8_PIC12F609/debug\pic12_c_template_1.X.debug.obj
 4 intentry CODE >4929:C:\Program Files (x86)\Microchip\xc8\v1.34\include\pic12lf1822.h
 4 intentry CODE >23:C:\Users\cody\Documents\GitHub\Tree_Fader\Software\pic12_c_template_1.X\interrupts.c
 8 intentry CODE >50:C:\Users\cody\Documents\GitHub\Tree_Fader\Software\pic12_c_template_1.X\interrupts.c
-C cinit CODE >1274:C:\Users\cody\AppData\Local\Temp\sbb8.
-C cinit CODE >1277:C:\Users\cody\AppData\Local\Temp\sbb8.
-C cinit CODE >1283:C:\Users\cody\AppData\Local\Temp\sbb8.
-C cinit CODE >1284:C:\Users\cody\AppData\Local\Temp\sbb8.
-D cinit CODE >1285:C:\Users\cody\AppData\Local\Temp\sbb8.
+C cinit CODE >1274:C:\Users\cody\AppData\Local\Temp\s79k.
+C cinit CODE >1277:C:\Users\cody\AppData\Local\Temp\s79k.
+C cinit CODE >1283:C:\Users\cody\AppData\Local\Temp\s79k.
+C cinit CODE >1284:C:\Users\cody\AppData\Local\Temp\s79k.
+D cinit CODE >1285:C:\Users\cody\AppData\Local\Temp\s79k.
 E maintext CODE >27:C:\Users\cody\Documents\GitHub\Tree_Fader\Software\pic12_c_template_1.X\main.c
 E maintext CODE >30:C:\Users\cody\Documents\GitHub\Tree_Fader\Software\pic12_c_template_1.X\main.c
 F maintext CODE >33:C:\Users\cody\Documents\GitHub\Tree_Fader\Software\pic12_c_template_1.X\main.c
@@ -157,59 +157,59 @@ F maintext CODE >33:C:\Users\cody\Documents\GitHub\Tree_Fader\Software\pic12_c_t
 # was defined in a psect then <psect> will be "-". File-name
 # is the name of the object file in which the symbol was defined.
 %SYMTAB
-___latbits 0 0 ABS 0 - dist/XC8_PIC12F609/production\pic12_c_template_1.X.production.obj
+___latbits 0 0 ABS 0 - dist/XC8_PIC12F609/debug\pic12_c_template_1.X.debug.obj
 __Hspace_0 8009 0 ABS 0 - -
 __Hspace_1 78 0 ABS 0 - -
 __Hspace_2 0 0 ABS 0 - -
 __Hspace_3 0 0 ABS 0 - -
 __Heeprom_data 0 0 EEDATA 3 eeprom_data -
-__CFG_MCLRE$ON 0 0 ABS 0 - dist/XC8_PIC12F609/production\pic12_c_template_1.X.production.obj
-ltemp0 7E 0 ABS 0 - dist/XC8_PIC12F609/production\pic12_c_template_1.X.production.obj
-ltemp1 82 0 ABS 0 - dist/XC8_PIC12F609/production\pic12_c_template_1.X.production.obj
-ltemp2 86 0 ABS 0 - dist/XC8_PIC12F609/production\pic12_c_template_1.X.production.obj
-ltemp3 80 0 ABS 0 - dist/XC8_PIC12F609/production\pic12_c_template_1.X.production.obj
+__CFG_MCLRE$ON 0 0 ABS 0 - dist/XC8_PIC12F609/debug\pic12_c_template_1.X.debug.obj
+ltemp0 7E 0 ABS 0 - dist/XC8_PIC12F609/debug\pic12_c_template_1.X.debug.obj
+ltemp1 82 0 ABS 0 - dist/XC8_PIC12F609/debug\pic12_c_template_1.X.debug.obj
+ltemp2 86 0 ABS 0 - dist/XC8_PIC12F609/debug\pic12_c_template_1.X.debug.obj
+ltemp3 80 0 ABS 0 - dist/XC8_PIC12F609/debug\pic12_c_template_1.X.debug.obj
 __Hstrings 0 0 ABS 0 strings -
-_TMR0 15 0 ABS 0 - dist/XC8_PIC12F609/production\pic12_c_template_1.X.production.obj
-___sp 0 0 STACK 2 stack C:\Users\cody\AppData\Local\Temp\sbb8.obj
-_main 1C 0 CODE 0 maintext dist/XC8_PIC12F609/production\pic12_c_template_1.X.production.obj
-btemp 7E 0 ABS 0 - dist/XC8_PIC12F609/production\pic12_c_template_1.X.production.obj
-ltemp 7E 0 ABS 0 - dist/XC8_PIC12F609/production\pic12_c_template_1.X.production.obj
-start 16 0 CODE 0 init C:\Users\cody\AppData\Local\Temp\sbb8.obj
-ttemp 7E 0 ABS 0 - dist/XC8_PIC12F609/production\pic12_c_template_1.X.production.obj
-wtemp 7E 0 ABS 0 - dist/XC8_PIC12F609/production\pic12_c_template_1.X.production.obj
-__size_of_main 0 0 ABS 0 - dist/XC8_PIC12F609/production\pic12_c_template_1.X.production.obj
-_OPTION_REGbits 95 0 ABS 0 - dist/XC8_PIC12F609/production\pic12_c_template_1.X.production.obj
+_TMR0 15 0 ABS 0 - dist/XC8_PIC12F609/debug\pic12_c_template_1.X.debug.obj
+___sp 0 0 STACK 2 stack C:\Users\cody\AppData\Local\Temp\s79k.obj
+_main 1C 0 CODE 0 maintext dist/XC8_PIC12F609/debug\pic12_c_template_1.X.debug.obj
+btemp 7E 0 ABS 0 - dist/XC8_PIC12F609/debug\pic12_c_template_1.X.debug.obj
+ltemp 7E 0 ABS 0 - dist/XC8_PIC12F609/debug\pic12_c_template_1.X.debug.obj
+start 16 0 CODE 0 init C:\Users\cody\AppData\Local\Temp\s79k.obj
+ttemp 7E 0 ABS 0 - dist/XC8_PIC12F609/debug\pic12_c_template_1.X.debug.obj
+wtemp 7E 0 ABS 0 - dist/XC8_PIC12F609/debug\pic12_c_template_1.X.debug.obj
+__size_of_main 0 0 ABS 0 - dist/XC8_PIC12F609/debug\pic12_c_template_1.X.debug.obj
+_OPTION_REGbits 95 0 ABS 0 - dist/XC8_PIC12F609/debug\pic12_c_template_1.X.debug.obj
 __Hpowerup 0 0 CODE 0 powerup -
-main@red_cycle_count 72 0 COMMON 1 cstackCOMMON dist/XC8_PIC12F609/production\pic12_c_template_1.X.production.obj
-__end_of_ConfigureOscillator D0 0 CODE 0 text2 dist/XC8_PIC12F609/production\pic12_c_template_1.X.production.obj
-ttemp0 7E 0 ABS 0 - dist/XC8_PIC12F609/production\pic12_c_template_1.X.production.obj
-ttemp1 81 0 ABS 0 - dist/XC8_PIC12F609/production\pic12_c_template_1.X.production.obj
-ttemp2 84 0 ABS 0 - dist/XC8_PIC12F609/production\pic12_c_template_1.X.production.obj
-ttemp3 87 0 ABS 0 - dist/XC8_PIC12F609/production\pic12_c_template_1.X.production.obj
-ttemp4 7F 0 ABS 0 - dist/XC8_PIC12F609/production\pic12_c_template_1.X.production.obj
-intlevel0 0 0 CODE 0 functab C:\Users\cody\AppData\Local\Temp\sbb8.obj
-intlevel1 0 0 CODE 0 functab C:\Users\cody\AppData\Local\Temp\sbb8.obj
-intlevel2 0 0 CODE 0 functab C:\Users\cody\AppData\Local\Temp\sbb8.obj
-intlevel3 0 0 CODE 0 functab C:\Users\cody\AppData\Local\Temp\sbb8.obj
-intlevel4 0 0 CODE 0 functab C:\Users\cody\AppData\Local\Temp\sbb8.obj
-intlevel5 0 0 CODE 0 functab C:\Users\cody\AppData\Local\Temp\sbb8.obj
-_InitApp A2 0 CODE 0 text1 dist/XC8_PIC12F609/production\pic12_c_template_1.X.production.obj
-wtemp0 7E 0 ABS 0 - dist/XC8_PIC12F609/production\pic12_c_template_1.X.production.obj
-wtemp1 80 0 ABS 0 - dist/XC8_PIC12F609/production\pic12_c_template_1.X.production.obj
-wtemp2 82 0 ABS 0 - dist/XC8_PIC12F609/production\pic12_c_template_1.X.production.obj
-wtemp3 84 0 ABS 0 - dist/XC8_PIC12F609/production\pic12_c_template_1.X.production.obj
-wtemp4 86 0 ABS 0 - dist/XC8_PIC12F609/production\pic12_c_template_1.X.production.obj
-wtemp5 88 0 ABS 0 - dist/XC8_PIC12F609/production\pic12_c_template_1.X.production.obj
-wtemp6 7F 0 ABS 0 - dist/XC8_PIC12F609/production\pic12_c_template_1.X.production.obj
+main@red_cycle_count 72 0 COMMON 1 cstackCOMMON dist/XC8_PIC12F609/debug\pic12_c_template_1.X.debug.obj
+__end_of_ConfigureOscillator D0 0 CODE 0 text2 dist/XC8_PIC12F609/debug\pic12_c_template_1.X.debug.obj
+ttemp0 7E 0 ABS 0 - dist/XC8_PIC12F609/debug\pic12_c_template_1.X.debug.obj
+ttemp1 81 0 ABS 0 - dist/XC8_PIC12F609/debug\pic12_c_template_1.X.debug.obj
+ttemp2 84 0 ABS 0 - dist/XC8_PIC12F609/debug\pic12_c_template_1.X.debug.obj
+ttemp3 87 0 ABS 0 - dist/XC8_PIC12F609/debug\pic12_c_template_1.X.debug.obj
+ttemp4 7F 0 ABS 0 - dist/XC8_PIC12F609/debug\pic12_c_template_1.X.debug.obj
+intlevel0 0 0 CODE 0 functab C:\Users\cody\AppData\Local\Temp\s79k.obj
+intlevel1 0 0 CODE 0 functab C:\Users\cody\AppData\Local\Temp\s79k.obj
+intlevel2 0 0 CODE 0 functab C:\Users\cody\AppData\Local\Temp\s79k.obj
+intlevel3 0 0 CODE 0 functab C:\Users\cody\AppData\Local\Temp\s79k.obj
+intlevel4 0 0 CODE 0 functab C:\Users\cody\AppData\Local\Temp\s79k.obj
+intlevel5 0 0 CODE 0 functab C:\Users\cody\AppData\Local\Temp\s79k.obj
+_InitApp A2 0 CODE 0 text1 dist/XC8_PIC12F609/debug\pic12_c_template_1.X.debug.obj
+wtemp0 7E 0 ABS 0 - dist/XC8_PIC12F609/debug\pic12_c_template_1.X.debug.obj
+wtemp1 80 0 ABS 0 - dist/XC8_PIC12F609/debug\pic12_c_template_1.X.debug.obj
+wtemp2 82 0 ABS 0 - dist/XC8_PIC12F609/debug\pic12_c_template_1.X.debug.obj
+wtemp3 84 0 ABS 0 - dist/XC8_PIC12F609/debug\pic12_c_template_1.X.debug.obj
+wtemp4 86 0 ABS 0 - dist/XC8_PIC12F609/debug\pic12_c_template_1.X.debug.obj
+wtemp5 88 0 ABS 0 - dist/XC8_PIC12F609/debug\pic12_c_template_1.X.debug.obj
+wtemp6 7F 0 ABS 0 - dist/XC8_PIC12F609/debug\pic12_c_template_1.X.debug.obj
 __Hfunctab 0 0 CODE 0 functab -
 __Hclrtext 0 0 ABS 0 clrtext -
-_ANSELA 18C 0 ABS 0 - dist/XC8_PIC12F609/production\pic12_c_template_1.X.production.obj
+_ANSELA 18C 0 ABS 0 - dist/XC8_PIC12F609/debug\pic12_c_template_1.X.debug.obj
 __Lmaintext 0 0 ABS 0 maintext -
-main@red_direction 74 0 COMMON 1 cstackCOMMON dist/XC8_PIC12F609/production\pic12_c_template_1.X.production.obj
-start_initialization 18 0 CODE 0 cinit dist/XC8_PIC12F609/production\pic12_c_template_1.X.production.obj
-_OSCCON 99 0 ABS 0 - dist/XC8_PIC12F609/production\pic12_c_template_1.X.production.obj
-_TRISAbits 8C 0 ABS 0 - dist/XC8_PIC12F609/production\pic12_c_template_1.X.production.obj
-___int_sp 0 0 STACK 2 stack C:\Users\cody\AppData\Local\Temp\sbb8.obj
+main@red_direction 74 0 COMMON 1 cstackCOMMON dist/XC8_PIC12F609/debug\pic12_c_template_1.X.debug.obj
+start_initialization 18 0 CODE 0 cinit dist/XC8_PIC12F609/debug\pic12_c_template_1.X.debug.obj
+_OSCCON 99 0 ABS 0 - dist/XC8_PIC12F609/debug\pic12_c_template_1.X.debug.obj
+_TRISAbits 8C 0 ABS 0 - dist/XC8_PIC12F609/debug\pic12_c_template_1.X.debug.obj
+___int_sp 0 0 STACK 2 stack C:\Users\cody\AppData\Local\Temp\s79k.obj
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
 __Hbank2 0 0 BANK2 1 bank2 -
@@ -269,7 +269,7 @@ __Hbank30 0 0 BANK30 1 bank30 -
 __Hbank31 0 0 BANK31 1 bank31 -
 __Hbigram 0 0 ABS 0 bigram -
 __Hmaintext 0 0 ABS 0 maintext -
-__CFG_FOSC$INTOSC 0 0 ABS 0 - dist/XC8_PIC12F609/production\pic12_c_template_1.X.production.obj
+__CFG_FOSC$INTOSC 0 0 ABS 0 - dist/XC8_PIC12F609/debug\pic12_c_template_1.X.debug.obj
 __Hcommon 0 0 ABS 0 common -
 __Hconfig 10012 0 CONFIG 0 config -
 __Lbank0 0 0 ABS 0 bank0 -
@@ -307,8 +307,8 @@ __Lsfr29 0 0 ABS 0 sfr29 -
 __Lsfr30 0 0 ABS 0 sfr30 -
 __Lsfr31 0 0 ABS 0 sfr31 -
 __Lstack 0 0 STACK 2 stack -
-_PORTAbits C 0 ABS 0 - dist/XC8_PIC12F609/production\pic12_c_template_1.X.production.obj
-_INTCONbits B 0 ABS 0 - dist/XC8_PIC12F609/production\pic12_c_template_1.X.production.obj
+_PORTAbits C 0 ABS 0 - dist/XC8_PIC12F609/debug\pic12_c_template_1.X.debug.obj
+_INTCONbits B 0 ABS 0 - dist/XC8_PIC12F609/debug\pic12_c_template_1.X.debug.obj
 __Habs1 0 0 ABS 0 abs1 -
 __Hcode 0 0 ABS 0 code -
 __Hinit 16 0 CODE 0 init -
@@ -337,20 +337,20 @@ __Lsfr7 0 0 ABS 0 sfr7 -
 __Lsfr8 0 0 ABS 0 sfr8 -
 __Lsfr9 0 0 ABS 0 sfr9 -
 __Ltext 0 0 ABS 0 text -
-main@red_duty_cycle 76 0 COMMON 1 cstackCOMMON dist/XC8_PIC12F609/production\pic12_c_template_1.X.production.obj
+main@red_duty_cycle 76 0 COMMON 1 cstackCOMMON dist/XC8_PIC12F609/debug\pic12_c_template_1.X.debug.obj
 __HcstackCOMMON 0 0 ABS 0 cstackCOMMON -
 __S0 8009 0 ABS 0 - -
 __S1 78 0 ABS 0 - -
 __S2 0 0 ABS 0 - -
 __S3 0 0 ABS 0 - -
-_isr 8 0 CODE 0 intentry dist/XC8_PIC12F609/production\pic12_c_template_1.X.production.obj
-__CFG_PLLEN$ON 0 0 ABS 0 - dist/XC8_PIC12F609/production\pic12_c_template_1.X.production.obj
-__end_of_isr 16 0 CODE 0 intentry dist/XC8_PIC12F609/production\pic12_c_template_1.X.production.obj
-__CFG_BOREN$ON 0 0 ABS 0 - dist/XC8_PIC12F609/production\pic12_c_template_1.X.production.obj
+_isr 8 0 CODE 0 intentry dist/XC8_PIC12F609/debug\pic12_c_template_1.X.debug.obj
+__CFG_PLLEN$ON 0 0 ABS 0 - dist/XC8_PIC12F609/debug\pic12_c_template_1.X.debug.obj
+__end_of_isr 16 0 CODE 0 intentry dist/XC8_PIC12F609/debug\pic12_c_template_1.X.debug.obj
+__CFG_BOREN$ON 0 0 ABS 0 - dist/XC8_PIC12F609/debug\pic12_c_template_1.X.debug.obj
 __Lintentry 8 0 CODE 0 intentry -
-reset_vec 0 0 CODE 0 reset_vec C:\Users\cody\AppData\Local\Temp\sbb8.obj
-__CFG_FCMEN$ON 0 0 ABS 0 - dist/XC8_PIC12F609/production\pic12_c_template_1.X.production.obj
-__size_of_InitApp 0 0 ABS 0 - dist/XC8_PIC12F609/production\pic12_c_template_1.X.production.obj
+reset_vec 0 0 CODE 0 reset_vec C:\Users\cody\AppData\Local\Temp\s79k.obj
+__CFG_FCMEN$ON 0 0 ABS 0 - dist/XC8_PIC12F609/debug\pic12_c_template_1.X.debug.obj
+__size_of_InitApp 0 0 ABS 0 - dist/XC8_PIC12F609/debug\pic12_c_template_1.X.debug.obj
 __Lbank10 0 0 BANK10 1 bank10 -
 __Lbank11 0 0 BANK11 1 bank11 -
 __Lbank12 0 0 BANK12 1 bank12 -
@@ -373,52 +373,52 @@ __Lbank28 0 0 BANK28 1 bank28 -
 __Lbank29 0 0 BANK29 1 bank29 -
 __Lbank30 0 0 BANK30 1 bank30 -
 __Lbank31 0 0 BANK31 1 bank31 -
-__pmaintext 1C 0 CODE 0 maintext dist/XC8_PIC12F609/production\pic12_c_template_1.X.production.obj
+__pmaintext 1C 0 CODE 0 maintext dist/XC8_PIC12F609/debug\pic12_c_template_1.X.debug.obj
 __Lbigram 0 0 ABS 0 bigram -
-__CFG_BORV$LO 0 0 ABS 0 - dist/XC8_PIC12F609/production\pic12_c_template_1.X.production.obj
+__CFG_BORV$LO 0 0 ABS 0 - dist/XC8_PIC12F609/debug\pic12_c_template_1.X.debug.obj
 __Lcommon 0 0 ABS 0 common -
 __Lconfig 1000E 0 CONFIG 0 config -
-__CFG_CP$OFF 0 0 ABS 0 - dist/XC8_PIC12F609/production\pic12_c_template_1.X.production.obj
-__CFG_IESO$ON 0 0 ABS 0 - dist/XC8_PIC12F609/production\pic12_c_template_1.X.production.obj
-__CFG_WDTE$OFF 0 0 ABS 0 - dist/XC8_PIC12F609/production\pic12_c_template_1.X.production.obj
-stackhi 206F 0 ABS 0 - C:\Users\cody\AppData\Local\Temp\sbb8.obj
-stacklo 2000 0 ABS 0 - C:\Users\cody\AppData\Local\Temp\sbb8.obj
+__CFG_CP$OFF 0 0 ABS 0 - dist/XC8_PIC12F609/debug\pic12_c_template_1.X.debug.obj
+__CFG_IESO$ON 0 0 ABS 0 - dist/XC8_PIC12F609/debug\pic12_c_template_1.X.debug.obj
+stackhi 205F 0 ABS 0 - C:\Users\cody\AppData\Local\Temp\s79k.obj
+stacklo 2000 0 ABS 0 - C:\Users\cody\AppData\Local\Temp\s79k.obj
 __Lspace_0 0 0 ABS 0 - -
 __Lspace_1 0 0 ABS 0 - -
 __Lspace_2 0 0 ABS 0 - -
 __Lspace_3 0 0 ABS 0 - -
 __Lend_init 16 0 CODE 0 end_init -
-__CFG_LVP$ON 0 0 ABS 0 - dist/XC8_PIC12F609/production\pic12_c_template_1.X.production.obj
+__CFG_LVP$ON 0 0 ABS 0 - dist/XC8_PIC12F609/debug\pic12_c_template_1.X.debug.obj
 __LcstackCOMMON 0 0 ABS 0 cstackCOMMON -
-end_of_initialization 18 0 CODE 0 cinit dist/XC8_PIC12F609/production\pic12_c_template_1.X.production.obj
+end_of_initialization 18 0 CODE 0 cinit dist/XC8_PIC12F609/debug\pic12_c_template_1.X.debug.obj
 __Hintentry 16 0 CODE 0 intentry -
-__CFG_STVREN$ON 0 0 ABS 0 - dist/XC8_PIC12F609/production\pic12_c_template_1.X.production.obj
+__CFG_STVREN$ON 0 0 ABS 0 - dist/XC8_PIC12F609/debug\pic12_c_template_1.X.debug.obj
 __Lstrings 0 0 ABS 0 strings -
-__Hreset_vec 2 0 CODE 0 reset_vec -
-__ptext1 A2 0 CODE 0 text1 dist/XC8_PIC12F609/production\pic12_c_template_1.X.production.obj
-__ptext2 C4 0 CODE 0 text2 dist/XC8_PIC12F609/production\pic12_c_template_1.X.production.obj
-__end_of_InitApp C4 0 CODE 0 text1 dist/XC8_PIC12F609/production\pic12_c_template_1.X.production.obj
+__Hreset_vec 4 0 CODE 0 reset_vec -
+__ptext1 A2 0 CODE 0 text1 dist/XC8_PIC12F609/debug\pic12_c_template_1.X.debug.obj
+__ptext2 C4 0 CODE 0 text2 dist/XC8_PIC12F609/debug\pic12_c_template_1.X.debug.obj
+__end_of_InitApp C4 0 CODE 0 text1 dist/XC8_PIC12F609/debug\pic12_c_template_1.X.debug.obj
 __Lpowerup 0 0 CODE 0 powerup -
 __Leeprom_data 0 0 EEDATA 3 eeprom_data -
-__size_of_ConfigureOscillator 0 0 ABS 0 - dist/XC8_PIC12F609/production\pic12_c_template_1.X.production.obj
+__size_of_ConfigureOscillator 0 0 ABS 0 - dist/XC8_PIC12F609/debug\pic12_c_template_1.X.debug.obj
 __Lreset_vec 0 0 CODE 0 reset_vec -
-__CFG_CLKOUTEN$OFF 0 0 ABS 0 - dist/XC8_PIC12F609/production\pic12_c_template_1.X.production.obj
-__end_of__initialization 18 0 CODE 0 cinit dist/XC8_PIC12F609/production\pic12_c_template_1.X.production.obj
+__CFG_CLKOUTEN$OFF 0 0 ABS 0 - dist/XC8_PIC12F609/debug\pic12_c_template_1.X.debug.obj
+__CFG_WDTE$ON 0 0 ABS 0 - dist/XC8_PIC12F609/debug\pic12_c_template_1.X.debug.obj
+__end_of__initialization 18 0 CODE 0 cinit dist/XC8_PIC12F609/debug\pic12_c_template_1.X.debug.obj
 __Lfunctab 0 0 CODE 0 functab -
 __Lclrtext 0 0 ABS 0 clrtext -
-__pcstackCOMMON 70 0 COMMON 1 cstackCOMMON dist/XC8_PIC12F609/production\pic12_c_template_1.X.production.obj
+__pcstackCOMMON 70 0 COMMON 1 cstackCOMMON dist/XC8_PIC12F609/debug\pic12_c_template_1.X.debug.obj
 __Hend_init 18 0 CODE 0 end_init -
-__end_of_main A2 0 CODE 0 maintext dist/XC8_PIC12F609/production\pic12_c_template_1.X.production.obj
-_ConfigureOscillator C4 0 CODE 0 text2 dist/XC8_PIC12F609/production\pic12_c_template_1.X.production.obj
+__end_of_main A2 0 CODE 0 maintext dist/XC8_PIC12F609/debug\pic12_c_template_1.X.debug.obj
+_ConfigureOscillator C4 0 CODE 0 text2 dist/XC8_PIC12F609/debug\pic12_c_template_1.X.debug.obj
 __Hram 0 0 ABS 0 ram -
 __Lram 0 0 ABS 0 ram -
-__CFG_CPD$OFF 0 0 ABS 0 - dist/XC8_PIC12F609/production\pic12_c_template_1.X.production.obj
-__pintentry 8 0 CODE 0 intentry dist/XC8_PIC12F609/production\pic12_c_template_1.X.production.obj
-_OSCSTATbits 9A 0 ABS 0 - dist/XC8_PIC12F609/production\pic12_c_template_1.X.production.obj
-__size_of_isr 0 0 ABS 0 - dist/XC8_PIC12F609/production\pic12_c_template_1.X.production.obj
-__initialization 18 0 CODE 0 cinit dist/XC8_PIC12F609/production\pic12_c_template_1.X.production.obj
-__CFG_PWRTE$OFF 0 0 ABS 0 - dist/XC8_PIC12F609/production\pic12_c_template_1.X.production.obj
-__CFG_WRT$OFF 0 0 ABS 0 - dist/XC8_PIC12F609/production\pic12_c_template_1.X.production.obj
+__CFG_CPD$OFF 0 0 ABS 0 - dist/XC8_PIC12F609/debug\pic12_c_template_1.X.debug.obj
+__pintentry 8 0 CODE 0 intentry dist/XC8_PIC12F609/debug\pic12_c_template_1.X.debug.obj
+_OSCSTATbits 9A 0 ABS 0 - dist/XC8_PIC12F609/debug\pic12_c_template_1.X.debug.obj
+__size_of_isr 0 0 ABS 0 - dist/XC8_PIC12F609/debug\pic12_c_template_1.X.debug.obj
+__initialization 18 0 CODE 0 cinit dist/XC8_PIC12F609/debug\pic12_c_template_1.X.debug.obj
+__CFG_PWRTE$OFF 0 0 ABS 0 - dist/XC8_PIC12F609/debug\pic12_c_template_1.X.debug.obj
+__CFG_WRT$OFF 0 0 ABS 0 - dist/XC8_PIC12F609/debug\pic12_c_template_1.X.debug.obj
 # %SPLITSTAB Section
 # This section enumerates all the psect splits performed by the assembler.
 # The beginning of the section is indicated by %SPLITSTAB.
@@ -446,5 +446,5 @@ __CFG_WRT$OFF 0 0 ABS 0 - dist/XC8_PIC12F609/production\pic12_c_template_1.X.pro
 %SEGMENTS
 cstackCOMMON 1 70 70 8 1
 intentry 0 4 8 64 2
-reset_vec 0 0 0 1 2
+reset_vec 0 0 0 2 2
 config 0 8007 1000E 2 2

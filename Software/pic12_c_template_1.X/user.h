@@ -2,7 +2,7 @@
 /* User Level #define Macros                                                  */
 /******************************************************************************/
 
-/* TODO Application specific user parameters used in user.c may go here */
+#define CYCLE_COUNT 100
 
 /******************************************************************************/
 /* User Function Prototypes                                                   */
