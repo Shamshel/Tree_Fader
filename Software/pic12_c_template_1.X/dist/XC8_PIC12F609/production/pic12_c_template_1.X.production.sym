@@ -1,7 +1,7 @@
 __CFG_PLLEN$ON 0 0 ABS 0
 __CFG_WRT$OFF 0 0 ABS 0
 __S0 8009 0 ABS 0
-__S1 78 0 ABS 0
+__S1 72 0 ABS 0
 __S2 0 0 ABS 0
 __S3 0 0 ABS 0
 __Hintentry B 0 CODE 0
@@ -40,7 +40,8 @@ __Hbigram 0 0 ABS 0
 __Lbigram 0 0 ABS 0
 __Hram 0 0 ABS 0
 __Lram 0 0 ABS 0
-main@red_direction 74 0 COMMON 1
+main@green_direction 24 0 BANK0 1
+main@red_direction 22 0 BANK0 1
 __size_of_isr 0 0 ABS 0
 __CFG_STVREN$ON 0 0 ABS 0
 __Hfunctab 0 0 CODE 0
@@ -78,11 +79,14 @@ __Lsfr9 0 0 ABS 0
 __Hcode 0 0 ABS 0
 __Lcode 0 0 ABS 0
 stackhi 206F 0 ABS 0
-__end_of_ConfigureOscillator 68 0 CODE 0
-stacklo 2000 0 ABS 0
+__HcstackBANK0 0 0 ABS 0
+__LcstackBANK0 0 0 ABS 0
+__end_of_ConfigureOscillator BC 0 CODE 0
+__pcstackBANK0 20 0 BANK0 1
+stacklo 200E 0 ABS 0
 __Hinit B 0 CODE 0
 __Linit B 0 CODE 0
-__end_of_main 51 0 CODE 0
+__end_of_main A5 0 CODE 0
 __Htext 0 0 ABS 0
 __Ltext 0 0 ABS 0
 __CFG_LVP$ON 0 0 ABS 0
@@ -158,12 +162,11 @@ __Hbank8 0 0 BANK8 1
 __Lbank8 0 0 BANK8 1
 __Hbank9 0 0 BANK9 1
 __Lbank9 0 0 BANK9 1
-__ptext1 51 0 CODE 0
-__ptext2 62 0 CODE 0
-main@red_cycle_count 72 0 COMMON 1
+__ptext1 A5 0 CODE 0
+__ptext2 B6 0 CODE 0
 __Hclrtext 0 0 ABS 0
 __Lclrtext 0 0 ABS 0
-__end_of_InitApp 62 0 CODE 0
+__end_of_InitApp B6 0 CODE 0
 __end_of__initialization C 0 CODE 0
 _OSCSTATbits 9A 0 ABS 0
 __Hidloc 0 0 IDLOC 0
@@ -172,10 +175,10 @@ __Hstack 0 0 STACK 2
 __Lstack 0 0 STACK 2
 __Hspace_0 8009 0 ABS 0
 __Lspace_0 0 0 ABS 0
-_InitApp 51 0 CODE 0
+_InitApp A5 0 CODE 0
 __end_of_isr B 0 CODE 0
 __CFG_IESO$ON 0 0 ABS 0
-__Hspace_1 78 0 ABS 0
+__Hspace_1 72 0 ABS 0
 __Lspace_1 0 0 ABS 0
 __Hspace_2 0 0 ABS 0
 __Lspace_2 0 0 ABS 0
@@ -196,6 +199,7 @@ __Lbank30 0 0 BANK30 1
 __Lbank11 0 0 BANK11 1
 __Hbank21 0 0 BANK21 1
 __Lbank21 0 0 BANK21 1
+main@green_duty_cycle 2A 0 BANK0 1
 __Hbank31 0 0 BANK31 1
 __Hbank12 0 0 BANK12 1
 __Lbank31 0 0 BANK31 1
@@ -204,7 +208,7 @@ __Hbank22 0 0 BANK22 1
 __Lbank22 0 0 BANK22 1
 __Hbank13 0 0 BANK13 1
 __Lbank13 0 0 BANK13 1
-main@red_duty_cycle 76 0 COMMON 1
+main@red_duty_cycle 28 0 BANK0 1
 __Hbank23 0 0 BANK23 1
 __Lbank23 0 0 BANK23 1
 __Hbank14 0 0 BANK14 1
@@ -237,6 +241,7 @@ __Hend_init C 0 CODE 0
 __Lend_init B 0 CODE 0
 __Hreset_vec 1 0 CODE 0
 __Lreset_vec 0 0 CODE 0
+main@cycle_count 20 0 BANK0 1
 intlevel0 0 0 CODE 0
 __size_of_InitApp 0 0 ABS 0
 __CFG_WDTE$OFF 0 0 ABS 0
@@ -245,6 +250,7 @@ intlevel2 0 0 CODE 0
 intlevel3 0 0 CODE 0
 intlevel4 0 0 CODE 0
 intlevel5 0 0 CODE 0
+main@blue_direction 26 0 BANK0 1
 __HcstackCOMMON 0 0 ABS 0
 __LcstackCOMMON 0 0 ABS 0
 __pcstackCOMMON 70 0 COMMON 1
@@ -256,15 +262,17 @@ __pmaintext E 0 CODE 0
 __CFG_MCLRE$ON 0 0 ABS 0
 _OPTION_REGbits 95 0 ABS 0
 __CFG_FOSC$INTOSC 0 0 ABS 0
+main@blue_duty_cycle 2C 0 BANK0 1
 __initialization C 0 CODE 0
 __CFG_CP$OFF 0 0 ABS 0
 __CFG_FCMEN$ON 0 0 ABS 0
-_ConfigureOscillator 62 0 CODE 0
+_ConfigureOscillator B6 0 CODE 0
 %segments
 reset_vec 0 1 CODE 0 0
-intentry 8 CF CODE 8 0
+intentry 8 177 CODE 8 0
 config 1000E 10011 CONFIG 1000E 0
-cstackCOMMON 70 77 COMMON 70 1
+cstackCOMMON 70 71 COMMON 70 1
+cstackBANK0 20 2D BANK0 20 1
 %locals
 dist/XC8_PIC12F609/production\pic12_c_template_1.X.production.obj
 C:\Program Files (x86)\Microchip\xc8\v1.34\include\pic12lf1822.h
@@ -272,7 +280,7 @@ C:\Program Files (x86)\Microchip\xc8\v1.34\include\pic12lf1822.h
 interrupts.c
 23 4 0 CODE 0
 50 8 0 CODE 0
-C:\Users\cody\AppData\Local\Temp\sbb8.
+C:\Users\cody\AppData\Local\Temp\sa4s.
 1274 C 0 CODE 0
 1277 C 0 CODE 0
 1283 C 0 CODE 0
@@ -283,45 +291,64 @@ main.c
 30 E 0 CODE 0
 33 F 0 CODE 0
 35 10 0 CODE 0
-36 14 0 CODE 0
-37 16 0 CODE 0
-39 1A 0 CODE 0
-48 1B 0 CODE 0
-49 1C 0 CODE 0
-50 1D 0 CODE 0
-57 1E 0 CODE 0
-59 2A 0 CODE 0
-61 2C 0 CODE 0
-63 2C 0 CODE 0
-65 2E 0 CODE 0
-66 2F 0 CODE 0
-68 31 0 CODE 0
-70 35 0 CODE 0
-72 3A 0 CODE 0
-73 3C 0 CODE 0
-75 40 0 CODE 0
-77 44 0 CODE 0
-81 48 0 CODE 0
-83 4C 0 CODE 0
-43 50 0 CODE 0
+37 13 0 CODE 0
+38 17 0 CODE 0
+40 1B 0 CODE 0
+41 1F 0 CODE 0
+43 23 0 CODE 0
+44 25 0 CODE 0
+55 29 0 CODE 0
+56 2A 0 CODE 0
+57 2B 0 CODE 0
+64 2C 0 CODE 0
+66 38 0 CODE 0
+70 3A 0 CODE 0
+72 46 0 CODE 0
+76 48 0 CODE 0
+78 54 0 CODE 0
+80 56 0 CODE 0
+82 56 0 CODE 0
+84 58 0 CODE 0
+86 59 0 CODE 0
+87 5B 0 CODE 0
+88 5C 0 CODE 0
+90 5D 0 CODE 0
+92 61 0 CODE 0
+94 66 0 CODE 0
+95 68 0 CODE 0
+96 6C 0 CODE 0
+97 70 0 CODE 0
+100 74 0 CODE 0
+102 78 0 CODE 0
+106 7C 0 CODE 0
+108 80 0 CODE 0
+112 84 0 CODE 0
+114 88 0 CODE 0
+118 8C 0 CODE 0
+120 90 0 CODE 0
+124 94 0 CODE 0
+126 98 0 CODE 0
+130 9C 0 CODE 0
+132 A0 0 CODE 0
+50 A4 0 CODE 0
 user.c
-22 51 0 CODE 0
-28 51 0 CODE 0
-30 53 0 CODE 0
-31 55 0 CODE 0
-32 56 0 CODE 0
-35 57 0 CODE 0
-38 58 0 CODE 0
-39 5A 0 CODE 0
-40 5B 0 CODE 0
-45 5C 0 CODE 0
-48 5D 0 CODE 0
-51 5F 0 CODE 0
-54 60 0 CODE 0
-64 61 0 CODE 0
+22 A5 0 CODE 0
+28 A5 0 CODE 0
+30 A7 0 CODE 0
+31 A9 0 CODE 0
+32 AA 0 CODE 0
+35 AB 0 CODE 0
+38 AC 0 CODE 0
+39 AE 0 CODE 0
+40 AF 0 CODE 0
+45 B0 0 CODE 0
+48 B1 0 CODE 0
+51 B3 0 CODE 0
+54 B4 0 CODE 0
+64 B5 0 CODE 0
 system.c
-18 62 0 CODE 0
-37 62 0 CODE 0
-42 65 0 CODE 0
-50 66 0 CODE 0
-42 67 0 CODE 0
+18 B6 0 CODE 0
+37 B6 0 CODE 0
+42 B9 0 CODE 0
+50 BA 0 CODE 0
+42 BB 0 CODE 0

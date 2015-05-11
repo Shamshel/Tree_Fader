@@ -2220,143 +2220,249 @@ Version 3.2 HI-TECH Software Intermediate Code
 "33
 [e ( _InitApp ..  ]
 "35
-[v _red_duty_cycle `i ~T0 @X0 1 a ]
-[; ;main.c: 35: int red_duty_cycle = 255;
-[e = _red_duty_cycle -> 255 `i ]
-"36
-[v _red_cycle_count `i ~T0 @X0 1 a ]
-[; ;main.c: 36: int red_cycle_count = 0;
-[e = _red_cycle_count -> 0 `i ]
+[v _cycle_count `i ~T0 @X0 1 a ]
+[; ;main.c: 35: int cycle_count = 0;
+[e = _cycle_count -> 0 `i ]
 "37
+[v _red_duty_cycle `i ~T0 @X0 1 a ]
+[; ;main.c: 37: int red_duty_cycle = 255;
+[e = _red_duty_cycle -> 255 `i ]
+"38
 [v _red_direction `i ~T0 @X0 1 a ]
-[; ;main.c: 37: int red_direction = -1;
+[; ;main.c: 38: int red_direction = -1;
 [e = _red_direction -U -> 1 `i ]
-[; ;main.c: 39: PORTAbits.RA5 = 0;
-"39
-[e = . . _PORTAbits 0 5 -> -> 0 `i `uc ]
-[; ;main.c: 40: PORTAbits.RA4 = 0;
 "40
-[e = . . _PORTAbits 0 4 -> -> 0 `i `uc ]
-[; ;main.c: 41: PORTAbits.RA2 = 0;
+[v _green_duty_cycle `i ~T0 @X0 1 a ]
+[; ;main.c: 40: int green_duty_cycle = 128;
+[e = _green_duty_cycle -> 128 `i ]
 "41
-[e = . . _PORTAbits 0 2 -> -> 0 `i `uc ]
-[; ;main.c: 43: while(1)
+[v _green_direction `i ~T0 @X0 1 a ]
+[; ;main.c: 41: int green_direction = -1;
+[e = _green_direction -U -> 1 `i ]
 "43
-[e :U 272 ]
-[; ;main.c: 44: {
+[v _blue_duty_cycle `i ~T0 @X0 1 a ]
+[; ;main.c: 43: int blue_duty_cycle = 0;
+[e = _blue_duty_cycle -> 0 `i ]
 "44
-{
-[; ;main.c: 46: if(0)
+[v _blue_direction `i ~T0 @X0 1 a ]
+[; ;main.c: 44: int blue_direction = 1;
+[e = _blue_direction -> 1 `i ]
+[; ;main.c: 46: PORTAbits.RA5 = 0;
 "46
-[e $ ! != -> 0 `i -> 0 `i 274  ]
-[; ;main.c: 47: {
-"47
-{
-[; ;main.c: 48: PORTAbits.RA5 = 0;
-"48
 [e = . . _PORTAbits 0 5 -> -> 0 `i `uc ]
-[; ;main.c: 49: PORTAbits.RA4 = 0;
-"49
+[; ;main.c: 47: PORTAbits.RA4 = 0;
+"47
 [e = . . _PORTAbits 0 4 -> -> 0 `i `uc ]
-[; ;main.c: 50: PORTAbits.RA2 = 0;
-"50
+[; ;main.c: 48: PORTAbits.RA2 = 0;
+"48
 [e = . . _PORTAbits 0 2 -> -> 0 `i `uc ]
-"52
-}
-[; ;main.c: 52: }
-[e $U 275  ]
+[; ;main.c: 50: while(1)
+"50
+[e :U 272 ]
+[; ;main.c: 51: {
+"51
+{
+[; ;main.c: 53: if(0)
+"53
+[e $ ! != -> 0 `i -> 0 `i 274  ]
+[; ;main.c: 54: {
 "54
-[e :U 274 ]
-[; ;main.c: 54: else
-[; ;main.c: 55: {
+{
+[; ;main.c: 55: PORTAbits.RA5 = 0;
 "55
-{
-[; ;main.c: 57: if(TMR0 > red_duty_cycle)
+[e = . . _PORTAbits 0 5 -> -> 0 `i `uc ]
+[; ;main.c: 56: PORTAbits.RA4 = 0;
+"56
+[e = . . _PORTAbits 0 4 -> -> 0 `i `uc ]
+[; ;main.c: 57: PORTAbits.RA2 = 0;
 "57
-[e $ ! > -> _TMR0 `i _red_duty_cycle 276  ]
-[; ;main.c: 58: {
-"58
-{
-[; ;main.c: 59: PORTAbits.RA5 = 1;
+[e = . . _PORTAbits 0 2 -> -> 0 `i `uc ]
 "59
-[e = . . _PORTAbits 0 5 -> -> 1 `i `uc ]
+}
+[; ;main.c: 59: }
+[e $U 275  ]
 "61
+[e :U 274 ]
+[; ;main.c: 61: else
+[; ;main.c: 62: {
+"62
+{
+[; ;main.c: 64: if(TMR0 > red_duty_cycle)
+"64
+[e $ ! > -> _TMR0 `i _red_duty_cycle 276  ]
+[; ;main.c: 65: {
+"65
+{
+[; ;main.c: 66: PORTAbits.RA2 = 1;
+"66
+[e = . . _PORTAbits 0 2 -> -> 1 `i `uc ]
+"68
 }
 [e :U 276 ]
-[; ;main.c: 61: }
-[; ;main.c: 63: if(INTCONbits.TMR0IF == 1)
-"63
-[e $ ! == -> . . _INTCONbits 0 2 `i -> 1 `i 277  ]
-[; ;main.c: 64: {
-"64
-{
-[; ;main.c: 65: INTCONbits.TMR0IF = 0;
-"65
-[e = . . _INTCONbits 0 2 -> -> 0 `i `uc ]
-[; ;main.c: 66: PORTAbits.RA5 = 0;
-"66
-[e = . . _PORTAbits 0 5 -> -> 0 `i `uc ]
-[; ;main.c: 68: red_cycle_count++;
-"68
-[e ++ _red_cycle_count -> 1 `i ]
-[; ;main.c: 70: if(red_cycle_count == 100)
+[; ;main.c: 68: }
+[; ;main.c: 70: if(TMR0 > green_duty_cycle)
 "70
-[e $ ! == _red_cycle_count -> 100 `i 278  ]
+[e $ ! > -> _TMR0 `i _green_duty_cycle 277  ]
 [; ;main.c: 71: {
 "71
 {
-[; ;main.c: 72: red_cycle_count = 0;
+[; ;main.c: 72: PORTAbits.RA5 = 1;
 "72
-[e = _red_cycle_count -> 0 `i ]
-[; ;main.c: 73: red_duty_cycle += red_direction;
-"73
-[e =+ _red_duty_cycle _red_direction ]
-[; ;main.c: 75: if(red_duty_cycle == 255)
-"75
-[e $ ! == _red_duty_cycle -> 255 `i 279  ]
-[; ;main.c: 76: {
-"76
-{
-[; ;main.c: 77: red_direction = -1;
-"77
-[e = _red_direction -U -> 1 `i ]
-"79
-}
-[e :U 279 ]
-[; ;main.c: 79: }
-[; ;main.c: 81: if(red_duty_cycle == 0)
-"81
-[e $ ! == _red_duty_cycle -> 0 `i 280  ]
-[; ;main.c: 82: {
-"82
-{
-[; ;main.c: 83: red_direction = 1;
-"83
-[e = _red_direction -> 1 `i ]
-"85
-}
-[e :U 280 ]
-"87
-}
-[e :U 278 ]
-"89
+[e = . . _PORTAbits 0 5 -> -> 1 `i `uc ]
+"74
 }
 [e :U 277 ]
-"91
+[; ;main.c: 74: }
+[; ;main.c: 76: if(TMR0 > blue_duty_cycle)
+"76
+[e $ ! > -> _TMR0 `i _blue_duty_cycle 278  ]
+[; ;main.c: 77: {
+"77
+{
+[; ;main.c: 78: PORTAbits.RA4 = 1;
+"78
+[e = . . _PORTAbits 0 4 -> -> 1 `i `uc ]
+"80
+}
+[e :U 278 ]
+[; ;main.c: 80: }
+[; ;main.c: 82: if(INTCONbits.TMR0IF == 1)
+"82
+[e $ ! == -> . . _INTCONbits 0 2 `i -> 1 `i 279  ]
+[; ;main.c: 83: {
+"83
+{
+[; ;main.c: 84: INTCONbits.TMR0IF = 0;
+"84
+[e = . . _INTCONbits 0 2 -> -> 0 `i `uc ]
+[; ;main.c: 86: PORTAbits.RA5 = 0;
+"86
+[e = . . _PORTAbits 0 5 -> -> 0 `i `uc ]
+[; ;main.c: 87: PORTAbits.RA4 = 0;
+"87
+[e = . . _PORTAbits 0 4 -> -> 0 `i `uc ]
+[; ;main.c: 88: PORTAbits.RA2 = 0;
+"88
+[e = . . _PORTAbits 0 2 -> -> 0 `i `uc ]
+[; ;main.c: 90: cycle_count++;
+"90
+[e ++ _cycle_count -> 1 `i ]
+[; ;main.c: 92: if(cycle_count == 100)
+"92
+[e $ ! == _cycle_count -> 100 `i 280  ]
+[; ;main.c: 93: {
+"93
+{
+[; ;main.c: 94: cycle_count = 0;
+"94
+[e = _cycle_count -> 0 `i ]
+[; ;main.c: 95: red_duty_cycle += red_direction;
+"95
+[e =+ _red_duty_cycle _red_direction ]
+[; ;main.c: 96: green_duty_cycle += green_direction;
+"96
+[e =+ _green_duty_cycle _green_direction ]
+[; ;main.c: 97: blue_duty_cycle += blue_direction;
+"97
+[e =+ _blue_duty_cycle _blue_direction ]
+[; ;main.c: 100: if(red_duty_cycle == 255)
+"100
+[e $ ! == _red_duty_cycle -> 255 `i 281  ]
+[; ;main.c: 101: {
+"101
+{
+[; ;main.c: 102: red_direction = -1;
+"102
+[e = _red_direction -U -> 1 `i ]
+"104
+}
+[e :U 281 ]
+[; ;main.c: 104: }
+[; ;main.c: 106: if(red_duty_cycle == 0)
+"106
+[e $ ! == _red_duty_cycle -> 0 `i 282  ]
+[; ;main.c: 107: {
+"107
+{
+[; ;main.c: 108: red_direction = 1;
+"108
+[e = _red_direction -> 1 `i ]
+"110
+}
+[e :U 282 ]
+[; ;main.c: 110: }
+[; ;main.c: 112: if(green_duty_cycle == 255)
+"112
+[e $ ! == _green_duty_cycle -> 255 `i 283  ]
+[; ;main.c: 113: {
+"113
+{
+[; ;main.c: 114: green_direction = -1;
+"114
+[e = _green_direction -U -> 1 `i ]
+"116
+}
+[e :U 283 ]
+[; ;main.c: 116: }
+[; ;main.c: 118: if(green_duty_cycle == 0)
+"118
+[e $ ! == _green_duty_cycle -> 0 `i 284  ]
+[; ;main.c: 119: {
+"119
+{
+[; ;main.c: 120: green_direction = 1;
+"120
+[e = _green_direction -> 1 `i ]
+"122
+}
+[e :U 284 ]
+[; ;main.c: 122: }
+[; ;main.c: 124: if(blue_duty_cycle == 255)
+"124
+[e $ ! == _blue_duty_cycle -> 255 `i 285  ]
+[; ;main.c: 125: {
+"125
+{
+[; ;main.c: 126: blue_direction = -1;
+"126
+[e = _blue_direction -U -> 1 `i ]
+"128
+}
+[e :U 285 ]
+[; ;main.c: 128: }
+[; ;main.c: 130: if(blue_duty_cycle == 0)
+"130
+[e $ ! == _blue_duty_cycle -> 0 `i 286  ]
+[; ;main.c: 131: {
+"131
+{
+[; ;main.c: 132: blue_direction = 1;
+"132
+[e = _blue_direction -> 1 `i ]
+"134
+}
+[e :U 286 ]
+"136
+}
+[e :U 280 ]
+"138
+}
+[e :U 279 ]
+"140
 }
 [e :U 275 ]
-"93
+"142
 }
 [e :U 271 ]
-"43
+"50
 [e $U 272  ]
 [e :U 273 ]
-[; ;main.c: 85: }
-[; ;main.c: 87: }
-[; ;main.c: 89: }
-[; ;main.c: 91: }
-[; ;main.c: 93: }
-[; ;main.c: 95: }
-"95
+[; ;main.c: 134: }
+[; ;main.c: 136: }
+[; ;main.c: 138: }
+[; ;main.c: 140: }
+[; ;main.c: 142: }
+[; ;main.c: 144: }
+"144
 [e :UE 270 ]
 }

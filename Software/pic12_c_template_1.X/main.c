@@ -32,9 +32,16 @@ void main(void)
     /* Initialize I/O and Peripherals for application */
     InitApp();
 
+    int cycle_count = 0;
+
     int red_duty_cycle = 255; //Duty cycle should be 0-255
-    int red_cycle_count = 0;
     int red_direction = -1;
+
+    int green_duty_cycle = 128; //Duty cycle should be 0-255
+    int green_direction = -1;
+
+    int blue_duty_cycle = 0; //Duty cycle should be 0-255
+    int blue_direction = 1;
 
     PORTAbits.RA5 = 0;
     PORTAbits.RA4 = 0;
@@ -56,21 +63,39 @@ void main(void)
             //red timer -> TMR0
             if(TMR0 > red_duty_cycle)
             {
+                PORTAbits.RA2 = 1;
+
+            }
+
+            if(TMR0 > green_duty_cycle)
+            {
                 PORTAbits.RA5 = 1;
+
+            }
+
+            if(TMR0 > blue_duty_cycle)
+            {
+                PORTAbits.RA4 = 1;
 
             }
 
             if(INTCONbits.TMR0IF == 1)
             {
                 INTCONbits.TMR0IF = 0;
+
                 PORTAbits.RA5 = 0;
+                PORTAbits.RA4 = 0;
+                PORTAbits.RA2 = 0;
 
-                red_cycle_count++;
+                cycle_count++;
 
-                if(red_cycle_count == CYCLE_COUNT)
+                if(cycle_count == CYCLE_COUNT)
                 {
-                    red_cycle_count = 0;
+                    cycle_count = 0;
                     red_duty_cycle += red_direction;
+                    green_duty_cycle += green_direction;
+                    blue_duty_cycle += blue_direction;
+
 
                     if(red_duty_cycle == 255)
                     {
@@ -81,6 +106,30 @@ void main(void)
                     if(red_duty_cycle == 0)
                     {
                         red_direction = 1;
+
+                    }
+
+                    if(green_duty_cycle == 255)
+                    {
+                        green_direction = -1;
+
+                    }
+
+                    if(green_duty_cycle == 0)
+                    {
+                        green_direction = 1;
+
+                    }
+
+                    if(blue_duty_cycle == 255)
+                    {
+                        blue_direction = -1;
+
+                    }
+
+                    if(blue_duty_cycle == 0)
+                    {
+                        blue_direction = 1;
 
                     }
 
