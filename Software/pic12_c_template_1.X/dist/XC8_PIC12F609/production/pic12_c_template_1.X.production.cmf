@@ -11,15 +11,15 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
-$C:\Users\cody\AppData\Local\Temp\sa4s.obj
+$C:\Users\cody\AppData\Local\Temp\scdo.obj
 reset_vec CODE 0 0 0 1 2
 end_init CODE 0 B B 1 2
 config CONFIG 0 8007 8007 2 2
 $dist/XC8_PIC12F609/production\pic12_c_template_1.X.production.obj
 cinit CODE 0 C C 2 2
-text1 CODE 0 A5 A5 11 2
-text2 CODE 0 B6 B6 6 2
-maintext CODE 0 E E 97 2
+text1 CODE 0 BE BE 11 2
+text2 CODE 0 CF CF 6 2
+maintext CODE 0 E E B0 2
 cstackCOMMON COMMON 1 70 70 2 1
 cstackBANK0 BANK0 1 20 20 E 1
 intentry CODE 0 4 4 7 2
@@ -34,9 +34,9 @@ RAM A0-BF 1
 BANK0 2E-6F 1
 BANK1 A0-BF 1
 CONST 1-3 2
-CONST BC-7FF 2
+CONST D5-7FF 2
 ENTRY 1-3 2
-ENTRY BC-7FF 2
+ENTRY D5-7FF 2
 IDLOC 8000-8003 2
 SFR10 500-56F 1
 SFR11 580-5EF 1
@@ -62,7 +62,7 @@ SFR30 F00-F6F 1
 SFR31 F80-FEF 1
 STACK 200E-206F 1
 CODE 1-3 2
-CODE BC-7FF 2
+CODE D5-7FF 2
 SFR0 0-1F 1
 SFR1 80-9F 1
 SFR2 100-16F 1
@@ -77,9 +77,9 @@ BIGRAM 2000-206F 1
 COMMON 72-7D 1
 EEDATA F000-F0FF 2
 STRCODE 1-3 2
-STRCODE BC-7FF 2
+STRCODE D5-7FF 2
 STRING 1-3 2
-STRING BC-7FF 2
+STRING D5-7FF 2
 # %LINETAB Section
 # This section enumerates the file/line to address mappings.
 # The beginning of the section is indicated by %LINETAB.
@@ -97,11 +97,11 @@ $dist/XC8_PIC12F609/production\pic12_c_template_1.X.production.obj
 4 intentry CODE >4929:C:\Program Files (x86)\Microchip\xc8\v1.34\include\pic12lf1822.h
 4 intentry CODE >23:C:\Users\cody\Documents\GitHub\Tree_Fader\Software\pic12_c_template_1.X\interrupts.c
 8 intentry CODE >50:C:\Users\cody\Documents\GitHub\Tree_Fader\Software\pic12_c_template_1.X\interrupts.c
-C cinit CODE >1274:C:\Users\cody\AppData\Local\Temp\sa4s.
-C cinit CODE >1277:C:\Users\cody\AppData\Local\Temp\sa4s.
-C cinit CODE >1283:C:\Users\cody\AppData\Local\Temp\sa4s.
-C cinit CODE >1284:C:\Users\cody\AppData\Local\Temp\sa4s.
-D cinit CODE >1285:C:\Users\cody\AppData\Local\Temp\sa4s.
+C cinit CODE >1276:C:\Users\cody\AppData\Local\Temp\scdo.
+C cinit CODE >1279:C:\Users\cody\AppData\Local\Temp\scdo.
+C cinit CODE >1285:C:\Users\cody\AppData\Local\Temp\scdo.
+C cinit CODE >1286:C:\Users\cody\AppData\Local\Temp\scdo.
+D cinit CODE >1287:C:\Users\cody\AppData\Local\Temp\scdo.
 E maintext CODE >27:C:\Users\cody\Documents\GitHub\Tree_Fader\Software\pic12_c_template_1.X\main.c
 E maintext CODE >30:C:\Users\cody\Documents\GitHub\Tree_Fader\Software\pic12_c_template_1.X\main.c
 F maintext CODE >33:C:\Users\cody\Documents\GitHub\Tree_Fader\Software\pic12_c_template_1.X\main.c
@@ -112,59 +112,70 @@ F maintext CODE >33:C:\Users\cody\Documents\GitHub\Tree_Fader\Software\pic12_c_t
 1F maintext CODE >41:C:\Users\cody\Documents\GitHub\Tree_Fader\Software\pic12_c_template_1.X\main.c
 23 maintext CODE >43:C:\Users\cody\Documents\GitHub\Tree_Fader\Software\pic12_c_template_1.X\main.c
 25 maintext CODE >44:C:\Users\cody\Documents\GitHub\Tree_Fader\Software\pic12_c_template_1.X\main.c
-29 maintext CODE >55:C:\Users\cody\Documents\GitHub\Tree_Fader\Software\pic12_c_template_1.X\main.c
-2A maintext CODE >56:C:\Users\cody\Documents\GitHub\Tree_Fader\Software\pic12_c_template_1.X\main.c
-2B maintext CODE >57:C:\Users\cody\Documents\GitHub\Tree_Fader\Software\pic12_c_template_1.X\main.c
-2C maintext CODE >64:C:\Users\cody\Documents\GitHub\Tree_Fader\Software\pic12_c_template_1.X\main.c
-38 maintext CODE >66:C:\Users\cody\Documents\GitHub\Tree_Fader\Software\pic12_c_template_1.X\main.c
-3A maintext CODE >70:C:\Users\cody\Documents\GitHub\Tree_Fader\Software\pic12_c_template_1.X\main.c
-46 maintext CODE >72:C:\Users\cody\Documents\GitHub\Tree_Fader\Software\pic12_c_template_1.X\main.c
-48 maintext CODE >76:C:\Users\cody\Documents\GitHub\Tree_Fader\Software\pic12_c_template_1.X\main.c
-54 maintext CODE >78:C:\Users\cody\Documents\GitHub\Tree_Fader\Software\pic12_c_template_1.X\main.c
-56 maintext CODE >80:C:\Users\cody\Documents\GitHub\Tree_Fader\Software\pic12_c_template_1.X\main.c
-56 maintext CODE >82:C:\Users\cody\Documents\GitHub\Tree_Fader\Software\pic12_c_template_1.X\main.c
-58 maintext CODE >84:C:\Users\cody\Documents\GitHub\Tree_Fader\Software\pic12_c_template_1.X\main.c
-59 maintext CODE >86:C:\Users\cody\Documents\GitHub\Tree_Fader\Software\pic12_c_template_1.X\main.c
-5B maintext CODE >87:C:\Users\cody\Documents\GitHub\Tree_Fader\Software\pic12_c_template_1.X\main.c
-5C maintext CODE >88:C:\Users\cody\Documents\GitHub\Tree_Fader\Software\pic12_c_template_1.X\main.c
-5D maintext CODE >90:C:\Users\cody\Documents\GitHub\Tree_Fader\Software\pic12_c_template_1.X\main.c
-61 maintext CODE >92:C:\Users\cody\Documents\GitHub\Tree_Fader\Software\pic12_c_template_1.X\main.c
-66 maintext CODE >94:C:\Users\cody\Documents\GitHub\Tree_Fader\Software\pic12_c_template_1.X\main.c
-68 maintext CODE >95:C:\Users\cody\Documents\GitHub\Tree_Fader\Software\pic12_c_template_1.X\main.c
-6C maintext CODE >96:C:\Users\cody\Documents\GitHub\Tree_Fader\Software\pic12_c_template_1.X\main.c
-70 maintext CODE >97:C:\Users\cody\Documents\GitHub\Tree_Fader\Software\pic12_c_template_1.X\main.c
-74 maintext CODE >100:C:\Users\cody\Documents\GitHub\Tree_Fader\Software\pic12_c_template_1.X\main.c
-78 maintext CODE >102:C:\Users\cody\Documents\GitHub\Tree_Fader\Software\pic12_c_template_1.X\main.c
-7C maintext CODE >106:C:\Users\cody\Documents\GitHub\Tree_Fader\Software\pic12_c_template_1.X\main.c
-80 maintext CODE >108:C:\Users\cody\Documents\GitHub\Tree_Fader\Software\pic12_c_template_1.X\main.c
-84 maintext CODE >112:C:\Users\cody\Documents\GitHub\Tree_Fader\Software\pic12_c_template_1.X\main.c
-88 maintext CODE >114:C:\Users\cody\Documents\GitHub\Tree_Fader\Software\pic12_c_template_1.X\main.c
-8C maintext CODE >118:C:\Users\cody\Documents\GitHub\Tree_Fader\Software\pic12_c_template_1.X\main.c
-90 maintext CODE >120:C:\Users\cody\Documents\GitHub\Tree_Fader\Software\pic12_c_template_1.X\main.c
-94 maintext CODE >124:C:\Users\cody\Documents\GitHub\Tree_Fader\Software\pic12_c_template_1.X\main.c
-98 maintext CODE >126:C:\Users\cody\Documents\GitHub\Tree_Fader\Software\pic12_c_template_1.X\main.c
-9C maintext CODE >130:C:\Users\cody\Documents\GitHub\Tree_Fader\Software\pic12_c_template_1.X\main.c
-A0 maintext CODE >132:C:\Users\cody\Documents\GitHub\Tree_Fader\Software\pic12_c_template_1.X\main.c
-A4 maintext CODE >50:C:\Users\cody\Documents\GitHub\Tree_Fader\Software\pic12_c_template_1.X\main.c
-A5 text1 CODE >22:C:\Users\cody\Documents\GitHub\Tree_Fader\Software\pic12_c_template_1.X\user.c
-A5 text1 CODE >28:C:\Users\cody\Documents\GitHub\Tree_Fader\Software\pic12_c_template_1.X\user.c
-A7 text1 CODE >30:C:\Users\cody\Documents\GitHub\Tree_Fader\Software\pic12_c_template_1.X\user.c
-A9 text1 CODE >31:C:\Users\cody\Documents\GitHub\Tree_Fader\Software\pic12_c_template_1.X\user.c
-AA text1 CODE >32:C:\Users\cody\Documents\GitHub\Tree_Fader\Software\pic12_c_template_1.X\user.c
-AB text1 CODE >35:C:\Users\cody\Documents\GitHub\Tree_Fader\Software\pic12_c_template_1.X\user.c
-AC text1 CODE >38:C:\Users\cody\Documents\GitHub\Tree_Fader\Software\pic12_c_template_1.X\user.c
-AE text1 CODE >39:C:\Users\cody\Documents\GitHub\Tree_Fader\Software\pic12_c_template_1.X\user.c
-AF text1 CODE >40:C:\Users\cody\Documents\GitHub\Tree_Fader\Software\pic12_c_template_1.X\user.c
-B0 text1 CODE >45:C:\Users\cody\Documents\GitHub\Tree_Fader\Software\pic12_c_template_1.X\user.c
-B1 text1 CODE >48:C:\Users\cody\Documents\GitHub\Tree_Fader\Software\pic12_c_template_1.X\user.c
-B3 text1 CODE >51:C:\Users\cody\Documents\GitHub\Tree_Fader\Software\pic12_c_template_1.X\user.c
-B4 text1 CODE >54:C:\Users\cody\Documents\GitHub\Tree_Fader\Software\pic12_c_template_1.X\user.c
-B5 text1 CODE >64:C:\Users\cody\Documents\GitHub\Tree_Fader\Software\pic12_c_template_1.X\user.c
-B6 text2 CODE >18:C:\Users\cody\Documents\GitHub\Tree_Fader\Software\pic12_c_template_1.X\system.c
-B6 text2 CODE >37:C:\Users\cody\Documents\GitHub\Tree_Fader\Software\pic12_c_template_1.X\system.c
-B9 text2 CODE >42:C:\Users\cody\Documents\GitHub\Tree_Fader\Software\pic12_c_template_1.X\system.c
-BA text2 CODE >50:C:\Users\cody\Documents\GitHub\Tree_Fader\Software\pic12_c_template_1.X\system.c
-BB text2 CODE >42:C:\Users\cody\Documents\GitHub\Tree_Fader\Software\pic12_c_template_1.X\system.c
+29 maintext CODE >46:C:\Users\cody\Documents\GitHub\Tree_Fader\Software\pic12_c_template_1.X\main.c
+2A maintext CODE >47:C:\Users\cody\Documents\GitHub\Tree_Fader\Software\pic12_c_template_1.X\main.c
+2B maintext CODE >48:C:\Users\cody\Documents\GitHub\Tree_Fader\Software\pic12_c_template_1.X\main.c
+2C maintext CODE >54:C:\Users\cody\Documents\GitHub\Tree_Fader\Software\pic12_c_template_1.X\main.c
+2D maintext CODE >56:C:\Users\cody\Documents\GitHub\Tree_Fader\Software\pic12_c_template_1.X\main.c
+2E maintext CODE >57:C:\Users\cody\Documents\GitHub\Tree_Fader\Software\pic12_c_template_1.X\main.c
+2F maintext CODE >58:C:\Users\cody\Documents\GitHub\Tree_Fader\Software\pic12_c_template_1.X\main.c
+30 maintext CODE >63:C:\Users\cody\Documents\GitHub\Tree_Fader\Software\pic12_c_template_1.X\main.c
+35 maintext CODE >65:C:\Users\cody\Documents\GitHub\Tree_Fader\Software\pic12_c_template_1.X\main.c
+37 maintext CODE >68:C:\Users\cody\Documents\GitHub\Tree_Fader\Software\pic12_c_template_1.X\main.c
+39 maintext CODE >54:C:\Users\cody\Documents\GitHub\Tree_Fader\Software\pic12_c_template_1.X\main.c
+3C maintext CODE >78:C:\Users\cody\Documents\GitHub\Tree_Fader\Software\pic12_c_template_1.X\main.c
+41 maintext CODE >80:C:\Users\cody\Documents\GitHub\Tree_Fader\Software\pic12_c_template_1.X\main.c
+43 maintext CODE >82:C:\Users\cody\Documents\GitHub\Tree_Fader\Software\pic12_c_template_1.X\main.c
+45 maintext CODE >87:C:\Users\cody\Documents\GitHub\Tree_Fader\Software\pic12_c_template_1.X\main.c
+51 maintext CODE >89:C:\Users\cody\Documents\GitHub\Tree_Fader\Software\pic12_c_template_1.X\main.c
+53 maintext CODE >93:C:\Users\cody\Documents\GitHub\Tree_Fader\Software\pic12_c_template_1.X\main.c
+5F maintext CODE >95:C:\Users\cody\Documents\GitHub\Tree_Fader\Software\pic12_c_template_1.X\main.c
+61 maintext CODE >99:C:\Users\cody\Documents\GitHub\Tree_Fader\Software\pic12_c_template_1.X\main.c
+6D maintext CODE >101:C:\Users\cody\Documents\GitHub\Tree_Fader\Software\pic12_c_template_1.X\main.c
+6F maintext CODE >103:C:\Users\cody\Documents\GitHub\Tree_Fader\Software\pic12_c_template_1.X\main.c
+6F maintext CODE >105:C:\Users\cody\Documents\GitHub\Tree_Fader\Software\pic12_c_template_1.X\main.c
+71 maintext CODE >107:C:\Users\cody\Documents\GitHub\Tree_Fader\Software\pic12_c_template_1.X\main.c
+72 maintext CODE >109:C:\Users\cody\Documents\GitHub\Tree_Fader\Software\pic12_c_template_1.X\main.c
+74 maintext CODE >110:C:\Users\cody\Documents\GitHub\Tree_Fader\Software\pic12_c_template_1.X\main.c
+75 maintext CODE >111:C:\Users\cody\Documents\GitHub\Tree_Fader\Software\pic12_c_template_1.X\main.c
+76 maintext CODE >113:C:\Users\cody\Documents\GitHub\Tree_Fader\Software\pic12_c_template_1.X\main.c
+7A maintext CODE >115:C:\Users\cody\Documents\GitHub\Tree_Fader\Software\pic12_c_template_1.X\main.c
+7F maintext CODE >117:C:\Users\cody\Documents\GitHub\Tree_Fader\Software\pic12_c_template_1.X\main.c
+81 maintext CODE >118:C:\Users\cody\Documents\GitHub\Tree_Fader\Software\pic12_c_template_1.X\main.c
+85 maintext CODE >119:C:\Users\cody\Documents\GitHub\Tree_Fader\Software\pic12_c_template_1.X\main.c
+89 maintext CODE >120:C:\Users\cody\Documents\GitHub\Tree_Fader\Software\pic12_c_template_1.X\main.c
+8D maintext CODE >123:C:\Users\cody\Documents\GitHub\Tree_Fader\Software\pic12_c_template_1.X\main.c
+91 maintext CODE >125:C:\Users\cody\Documents\GitHub\Tree_Fader\Software\pic12_c_template_1.X\main.c
+95 maintext CODE >129:C:\Users\cody\Documents\GitHub\Tree_Fader\Software\pic12_c_template_1.X\main.c
+99 maintext CODE >131:C:\Users\cody\Documents\GitHub\Tree_Fader\Software\pic12_c_template_1.X\main.c
+9D maintext CODE >135:C:\Users\cody\Documents\GitHub\Tree_Fader\Software\pic12_c_template_1.X\main.c
+A1 maintext CODE >137:C:\Users\cody\Documents\GitHub\Tree_Fader\Software\pic12_c_template_1.X\main.c
+A5 maintext CODE >141:C:\Users\cody\Documents\GitHub\Tree_Fader\Software\pic12_c_template_1.X\main.c
+A9 maintext CODE >143:C:\Users\cody\Documents\GitHub\Tree_Fader\Software\pic12_c_template_1.X\main.c
+AD maintext CODE >147:C:\Users\cody\Documents\GitHub\Tree_Fader\Software\pic12_c_template_1.X\main.c
+B1 maintext CODE >149:C:\Users\cody\Documents\GitHub\Tree_Fader\Software\pic12_c_template_1.X\main.c
+B5 maintext CODE >153:C:\Users\cody\Documents\GitHub\Tree_Fader\Software\pic12_c_template_1.X\main.c
+B9 maintext CODE >155:C:\Users\cody\Documents\GitHub\Tree_Fader\Software\pic12_c_template_1.X\main.c
+BD maintext CODE >50:C:\Users\cody\Documents\GitHub\Tree_Fader\Software\pic12_c_template_1.X\main.c
+BE text1 CODE >22:C:\Users\cody\Documents\GitHub\Tree_Fader\Software\pic12_c_template_1.X\user.c
+BE text1 CODE >28:C:\Users\cody\Documents\GitHub\Tree_Fader\Software\pic12_c_template_1.X\user.c
+C0 text1 CODE >30:C:\Users\cody\Documents\GitHub\Tree_Fader\Software\pic12_c_template_1.X\user.c
+C2 text1 CODE >31:C:\Users\cody\Documents\GitHub\Tree_Fader\Software\pic12_c_template_1.X\user.c
+C3 text1 CODE >32:C:\Users\cody\Documents\GitHub\Tree_Fader\Software\pic12_c_template_1.X\user.c
+C4 text1 CODE >35:C:\Users\cody\Documents\GitHub\Tree_Fader\Software\pic12_c_template_1.X\user.c
+C5 text1 CODE >38:C:\Users\cody\Documents\GitHub\Tree_Fader\Software\pic12_c_template_1.X\user.c
+C7 text1 CODE >39:C:\Users\cody\Documents\GitHub\Tree_Fader\Software\pic12_c_template_1.X\user.c
+C8 text1 CODE >40:C:\Users\cody\Documents\GitHub\Tree_Fader\Software\pic12_c_template_1.X\user.c
+C9 text1 CODE >45:C:\Users\cody\Documents\GitHub\Tree_Fader\Software\pic12_c_template_1.X\user.c
+CA text1 CODE >48:C:\Users\cody\Documents\GitHub\Tree_Fader\Software\pic12_c_template_1.X\user.c
+CC text1 CODE >51:C:\Users\cody\Documents\GitHub\Tree_Fader\Software\pic12_c_template_1.X\user.c
+CD text1 CODE >54:C:\Users\cody\Documents\GitHub\Tree_Fader\Software\pic12_c_template_1.X\user.c
+CE text1 CODE >64:C:\Users\cody\Documents\GitHub\Tree_Fader\Software\pic12_c_template_1.X\user.c
+CF text2 CODE >18:C:\Users\cody\Documents\GitHub\Tree_Fader\Software\pic12_c_template_1.X\system.c
+CF text2 CODE >37:C:\Users\cody\Documents\GitHub\Tree_Fader\Software\pic12_c_template_1.X\system.c
+D2 text2 CODE >39:C:\Users\cody\Documents\GitHub\Tree_Fader\Software\pic12_c_template_1.X\system.c
+D3 text2 CODE >45:C:\Users\cody\Documents\GitHub\Tree_Fader\Software\pic12_c_template_1.X\system.c
+D4 text2 CODE >39:C:\Users\cody\Documents\GitHub\Tree_Fader\Software\pic12_c_template_1.X\system.c
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -190,30 +201,30 @@ ltemp2 86 0 ABS 0 - dist/XC8_PIC12F609/production\pic12_c_template_1.X.productio
 ltemp3 80 0 ABS 0 - dist/XC8_PIC12F609/production\pic12_c_template_1.X.production.obj
 __Hstrings 0 0 ABS 0 strings -
 _TMR0 15 0 ABS 0 - dist/XC8_PIC12F609/production\pic12_c_template_1.X.production.obj
-___sp 0 0 STACK 2 stack C:\Users\cody\AppData\Local\Temp\sa4s.obj
+___sp 0 0 STACK 2 stack C:\Users\cody\AppData\Local\Temp\scdo.obj
 _main 1C 0 CODE 0 maintext dist/XC8_PIC12F609/production\pic12_c_template_1.X.production.obj
 btemp 7E 0 ABS 0 - dist/XC8_PIC12F609/production\pic12_c_template_1.X.production.obj
 ltemp 7E 0 ABS 0 - dist/XC8_PIC12F609/production\pic12_c_template_1.X.production.obj
-start 16 0 CODE 0 init C:\Users\cody\AppData\Local\Temp\sa4s.obj
+start 16 0 CODE 0 init C:\Users\cody\AppData\Local\Temp\scdo.obj
 ttemp 7E 0 ABS 0 - dist/XC8_PIC12F609/production\pic12_c_template_1.X.production.obj
 wtemp 7E 0 ABS 0 - dist/XC8_PIC12F609/production\pic12_c_template_1.X.production.obj
 __size_of_main 0 0 ABS 0 - dist/XC8_PIC12F609/production\pic12_c_template_1.X.production.obj
 _OPTION_REGbits 95 0 ABS 0 - dist/XC8_PIC12F609/production\pic12_c_template_1.X.production.obj
 __Hpowerup 0 0 CODE 0 powerup -
-__end_of_ConfigureOscillator 178 0 CODE 0 text2 dist/XC8_PIC12F609/production\pic12_c_template_1.X.production.obj
+__end_of_ConfigureOscillator 1AA 0 CODE 0 text2 dist/XC8_PIC12F609/production\pic12_c_template_1.X.production.obj
 main@blue_duty_cycle 2C 0 BANK0 1 cstackBANK0 dist/XC8_PIC12F609/production\pic12_c_template_1.X.production.obj
 ttemp0 7E 0 ABS 0 - dist/XC8_PIC12F609/production\pic12_c_template_1.X.production.obj
 ttemp1 81 0 ABS 0 - dist/XC8_PIC12F609/production\pic12_c_template_1.X.production.obj
 ttemp2 84 0 ABS 0 - dist/XC8_PIC12F609/production\pic12_c_template_1.X.production.obj
 ttemp3 87 0 ABS 0 - dist/XC8_PIC12F609/production\pic12_c_template_1.X.production.obj
 ttemp4 7F 0 ABS 0 - dist/XC8_PIC12F609/production\pic12_c_template_1.X.production.obj
-intlevel0 0 0 CODE 0 functab C:\Users\cody\AppData\Local\Temp\sa4s.obj
-intlevel1 0 0 CODE 0 functab C:\Users\cody\AppData\Local\Temp\sa4s.obj
-intlevel2 0 0 CODE 0 functab C:\Users\cody\AppData\Local\Temp\sa4s.obj
-intlevel3 0 0 CODE 0 functab C:\Users\cody\AppData\Local\Temp\sa4s.obj
-intlevel4 0 0 CODE 0 functab C:\Users\cody\AppData\Local\Temp\sa4s.obj
-intlevel5 0 0 CODE 0 functab C:\Users\cody\AppData\Local\Temp\sa4s.obj
-_InitApp 14A 0 CODE 0 text1 dist/XC8_PIC12F609/production\pic12_c_template_1.X.production.obj
+intlevel0 0 0 CODE 0 functab C:\Users\cody\AppData\Local\Temp\scdo.obj
+intlevel1 0 0 CODE 0 functab C:\Users\cody\AppData\Local\Temp\scdo.obj
+intlevel2 0 0 CODE 0 functab C:\Users\cody\AppData\Local\Temp\scdo.obj
+intlevel3 0 0 CODE 0 functab C:\Users\cody\AppData\Local\Temp\scdo.obj
+intlevel4 0 0 CODE 0 functab C:\Users\cody\AppData\Local\Temp\scdo.obj
+intlevel5 0 0 CODE 0 functab C:\Users\cody\AppData\Local\Temp\scdo.obj
+_InitApp 17C 0 CODE 0 text1 dist/XC8_PIC12F609/production\pic12_c_template_1.X.production.obj
 wtemp0 7E 0 ABS 0 - dist/XC8_PIC12F609/production\pic12_c_template_1.X.production.obj
 wtemp1 80 0 ABS 0 - dist/XC8_PIC12F609/production\pic12_c_template_1.X.production.obj
 wtemp2 82 0 ABS 0 - dist/XC8_PIC12F609/production\pic12_c_template_1.X.production.obj
@@ -231,7 +242,7 @@ start_initialization 18 0 CODE 0 cinit dist/XC8_PIC12F609/production\pic12_c_tem
 _OSCCON 99 0 ABS 0 - dist/XC8_PIC12F609/production\pic12_c_template_1.X.production.obj
 _TRISAbits 8C 0 ABS 0 - dist/XC8_PIC12F609/production\pic12_c_template_1.X.production.obj
 __pcstackBANK0 20 0 BANK0 1 cstackBANK0 dist/XC8_PIC12F609/production\pic12_c_template_1.X.production.obj
-___int_sp 0 0 STACK 2 stack C:\Users\cody\AppData\Local\Temp\sa4s.obj
+___int_sp 0 0 STACK 2 stack C:\Users\cody\AppData\Local\Temp\scdo.obj
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
 __Hbank2 0 0 BANK2 1 bank2 -
@@ -362,6 +373,7 @@ __Ltext 0 0 ABS 0 text -
 main@red_duty_cycle 28 0 BANK0 1 cstackBANK0 dist/XC8_PIC12F609/production\pic12_c_template_1.X.production.obj
 __LcstackBANK0 0 0 ABS 0 cstackBANK0 -
 __HcstackCOMMON 0 0 ABS 0 cstackCOMMON -
+_RA0 60 0 ABS 0 - dist/XC8_PIC12F609/production\pic12_c_template_1.X.production.obj
 __S0 8009 0 ABS 0 - -
 __S1 72 0 ABS 0 - -
 __S2 0 0 ABS 0 - -
@@ -372,7 +384,7 @@ main@green_direction 24 0 BANK0 1 cstackBANK0 dist/XC8_PIC12F609/production\pic1
 __end_of_isr 16 0 CODE 0 intentry dist/XC8_PIC12F609/production\pic12_c_template_1.X.production.obj
 __CFG_BOREN$ON 0 0 ABS 0 - dist/XC8_PIC12F609/production\pic12_c_template_1.X.production.obj
 __Lintentry 8 0 CODE 0 intentry -
-reset_vec 0 0 CODE 0 reset_vec C:\Users\cody\AppData\Local\Temp\sa4s.obj
+reset_vec 0 0 CODE 0 reset_vec C:\Users\cody\AppData\Local\Temp\scdo.obj
 __CFG_FCMEN$ON 0 0 ABS 0 - dist/XC8_PIC12F609/production\pic12_c_template_1.X.production.obj
 __size_of_InitApp 0 0 ABS 0 - dist/XC8_PIC12F609/production\pic12_c_template_1.X.production.obj
 __Lbank10 0 0 BANK10 1 bank10 -
@@ -405,8 +417,8 @@ __Lconfig 1000E 0 CONFIG 0 config -
 __CFG_CP$OFF 0 0 ABS 0 - dist/XC8_PIC12F609/production\pic12_c_template_1.X.production.obj
 __CFG_IESO$ON 0 0 ABS 0 - dist/XC8_PIC12F609/production\pic12_c_template_1.X.production.obj
 __CFG_WDTE$OFF 0 0 ABS 0 - dist/XC8_PIC12F609/production\pic12_c_template_1.X.production.obj
-stackhi 206F 0 ABS 0 - C:\Users\cody\AppData\Local\Temp\sa4s.obj
-stacklo 200E 0 ABS 0 - C:\Users\cody\AppData\Local\Temp\sa4s.obj
+stackhi 206F 0 ABS 0 - C:\Users\cody\AppData\Local\Temp\scdo.obj
+stacklo 200E 0 ABS 0 - C:\Users\cody\AppData\Local\Temp\scdo.obj
 __Lspace_0 0 0 ABS 0 - -
 __Lspace_1 0 0 ABS 0 - -
 __Lspace_2 0 0 ABS 0 - -
@@ -421,9 +433,9 @@ __CFG_STVREN$ON 0 0 ABS 0 - dist/XC8_PIC12F609/production\pic12_c_template_1.X.p
 __Lstrings 0 0 ABS 0 strings -
 __Hreset_vec 2 0 CODE 0 reset_vec -
 main@green_duty_cycle 2A 0 BANK0 1 cstackBANK0 dist/XC8_PIC12F609/production\pic12_c_template_1.X.production.obj
-__ptext1 14A 0 CODE 0 text1 dist/XC8_PIC12F609/production\pic12_c_template_1.X.production.obj
-__ptext2 16C 0 CODE 0 text2 dist/XC8_PIC12F609/production\pic12_c_template_1.X.production.obj
-__end_of_InitApp 16C 0 CODE 0 text1 dist/XC8_PIC12F609/production\pic12_c_template_1.X.production.obj
+__ptext1 17C 0 CODE 0 text1 dist/XC8_PIC12F609/production\pic12_c_template_1.X.production.obj
+__ptext2 19E 0 CODE 0 text2 dist/XC8_PIC12F609/production\pic12_c_template_1.X.production.obj
+__end_of_InitApp 19E 0 CODE 0 text1 dist/XC8_PIC12F609/production\pic12_c_template_1.X.production.obj
 __Lpowerup 0 0 CODE 0 powerup -
 __Leeprom_data 0 0 EEDATA 3 eeprom_data -
 __size_of_ConfigureOscillator 0 0 ABS 0 - dist/XC8_PIC12F609/production\pic12_c_template_1.X.production.obj
@@ -434,8 +446,8 @@ __Lfunctab 0 0 CODE 0 functab -
 __Lclrtext 0 0 ABS 0 clrtext -
 __pcstackCOMMON 70 0 COMMON 1 cstackCOMMON dist/XC8_PIC12F609/production\pic12_c_template_1.X.production.obj
 __Hend_init 18 0 CODE 0 end_init -
-__end_of_main 14A 0 CODE 0 maintext dist/XC8_PIC12F609/production\pic12_c_template_1.X.production.obj
-_ConfigureOscillator 16C 0 CODE 0 text2 dist/XC8_PIC12F609/production\pic12_c_template_1.X.production.obj
+__end_of_main 17C 0 CODE 0 maintext dist/XC8_PIC12F609/production\pic12_c_template_1.X.production.obj
+_ConfigureOscillator 19E 0 CODE 0 text2 dist/XC8_PIC12F609/production\pic12_c_template_1.X.production.obj
 main@cycle_count 20 0 BANK0 1 cstackBANK0 dist/XC8_PIC12F609/production\pic12_c_template_1.X.production.obj
 __Hram 0 0 ABS 0 ram -
 __Lram 0 0 ABS 0 ram -
@@ -473,6 +485,6 @@ __CFG_WRT$OFF 0 0 ABS 0 - dist/XC8_PIC12F609/production\pic12_c_template_1.X.pro
 %SEGMENTS
 cstackCOMMON 1 70 70 2 1
 cstackBANK0 1 20 20 E 1
-intentry 0 4 8 B8 2
+intentry 0 4 8 D1 2
 reset_vec 0 0 0 1 2
 config 0 8007 1000E 2 2

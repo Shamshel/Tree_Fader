@@ -19,7 +19,7 @@
 [v _ConfigureOscillator ConfigureOscillator `(v  1 e 0 0 ]
 "22 C:\Users\cody\Documents\GitHub\Tree_Fader\Software\pic12_c_template_1.X\user.c
 [v _InitApp InitApp `(v  1 e 0 0 ]
-[s S168 . 1 `uc 1 IOCIF 1 0 :1:0 
+[s S191 . 1 `uc 1 IOCIF 1 0 :1:0 
 `uc 1 INTF 1 0 :1:1 
 `uc 1 TMR0IF 1 0 :1:2 
 `uc 1 IOCIE 1 0 :1:3 
@@ -29,13 +29,13 @@
 `uc 1 GIE 1 0 :1:7 
 ]
 "360 C:\Program Files (x86)\Microchip\xc8\v1.34\include\pic12lf1822.h
-[s S177 . 1 `uc 1 . 1 0 :2:0 
+[s S200 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 T0IF 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 T0IE 1 0 :1:5 
 ]
-[u S182 . 1 `S168 1 . 1 0 `S177 1 . 1 0 ]
-[v _INTCONbits INTCONbits `VES182  1 e 1 @11 ]
+[u S205 . 1 `S191 1 . 1 0 `S200 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES205  1 e 1 @11 ]
 [s S29 . 1 `uc 1 RA0 1 0 :1:0 
 `uc 1 RA1 1 0 :1:1 
 `uc 1 RA2 1 0 :1:2 
@@ -104,7 +104,7 @@
 [v _PORTAbits PORTAbits `VES92  1 e 1 @12 ]
 "803
 [v _TMR0 TMR0 `VEuc  1 e 1 @21 ]
-[s S254 . 1 `uc 1 TRISA0 1 0 :1:0 
+[s S268 . 1 `uc 1 TRISA0 1 0 :1:0 
 `uc 1 TRISA1 1 0 :1:1 
 `uc 1 TRISA2 1 0 :1:2 
 `uc 1 TRISA3 1 0 :1:3 
@@ -112,9 +112,9 @@
 `uc 1 TRISA5 1 0 :1:5 
 ]
 "1228
-[u S261 . 1 `S254 1 . 1 0 ]
-[v _TRISAbits TRISAbits `VES261  1 e 1 @140 ]
-[s S347 . 1 `uc 1 PS0 1 0 :1:0 
+[u S275 . 1 `S268 1 . 1 0 ]
+[v _TRISAbits TRISAbits `VES275  1 e 1 @140 ]
+[s S361 . 1 `uc 1 PS0 1 0 :1:0 
 `uc 1 PS1 1 0 :1:1 
 `uc 1 PS2 1 0 :1:2 
 `uc 1 PSA 1 0 :1:3 
@@ -124,16 +124,16 @@
 `uc 1 nWPUEN 1 0 :1:7 
 ]
 "1385
-[s S356 . 1 `uc 1 PS 1 0 :3:0 
+[s S370 . 1 `uc 1 PS 1 0 :3:0 
 `uc 1 . 1 0 :1:3 
 `uc 1 T0SE 1 0 :1:4 
 `uc 1 T0CS 1 0 :1:5 
 ]
-[u S361 . 1 `S347 1 . 1 0 `S356 1 . 1 0 ]
-[v _OPTION_REGbits OPTION_REGbits `VES361  1 e 1 @149 ]
+[u S375 . 1 `S361 1 . 1 0 `S370 1 . 1 0 ]
+[v _OPTION_REGbits OPTION_REGbits `VES375  1 e 1 @149 ]
 "1609
 [v _OSCCON OSCCON `VEuc  1 e 1 @153 ]
-[s S223 . 1 `uc 1 HFIOFS 1 0 :1:0 
+[s S169 . 1 `uc 1 HFIOFS 1 0 :1:0 
 `uc 1 LFIOFR 1 0 :1:1 
 `uc 1 MFIOFR 1 0 :1:2 
 `uc 1 HFIOFL 1 0 :1:3 
@@ -143,10 +143,12 @@
 `uc 1 T1OSCR 1 0 :1:7 
 ]
 "1697
-[u S232 . 1 `S223 1 . 1 0 ]
-[v _OSCSTATbits OSCSTATbits `VES232  1 e 1 @154 ]
+[u S178 . 1 `S169 1 . 1 0 ]
+[v _OSCSTATbits OSCSTATbits `VES178  1 e 1 @154 ]
 "2578
 [v _ANSELA ANSELA `VEuc  1 e 1 @396 ]
+"5406
+[v _RA0 RA0 `VEb  1 e 0 @96 ]
 "27 C:\Users\cody\Documents\GitHub\Tree_Fader\Software\pic12_c_template_1.X\main.c
 [v _main main `(v  1 e 0 0 ]
 {
@@ -164,7 +166,7 @@
 [v main@red_direction red_direction `i  1 a 2 2 ]
 "35
 [v main@cycle_count cycle_count `i  1 a 2 0 ]
-"144
+"167
 } 0
 "22 C:\Users\cody\Documents\GitHub\Tree_Fader\Software\pic12_c_template_1.X\user.c
 [v _InitApp InitApp `(v  1 e 0 0 ]
@@ -174,7 +176,7 @@
 "18 C:\Users\cody\Documents\GitHub\Tree_Fader\Software\pic12_c_template_1.X\system.c
 [v _ConfigureOscillator ConfigureOscillator `(v  1 e 0 0 ]
 {
-"50
+"45
 } 0
 "23 C:\Users\cody\Documents\GitHub\Tree_Fader\Software\pic12_c_template_1.X\interrupts.c
 [v _isr isr `II(v  1 e 0 0 ]

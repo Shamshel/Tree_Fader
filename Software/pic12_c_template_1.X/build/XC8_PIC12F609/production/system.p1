@@ -2172,14 +2172,14 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;system.c: 37: OSCCON = 0b01011010;
 "37
 [e = _OSCCON -> -> 90 `i `uc ]
-[; ;system.c: 42: while(OSCSTATbits.HFIOFR != 1);
-"42
+[; ;system.c: 39: while(OSCSTATbits.HFIOFR != 1);
+"39
 [e $U 271  ]
 [e :U 272 ]
 [e :U 271 ]
 [e $ != -> . . _OSCSTATbits 0 4 `i -> 1 `i 272  ]
 [e :U 273 ]
-[; ;system.c: 50: }
-"50
+[; ;system.c: 45: }
+"45
 [e :UE 270 ]
 }

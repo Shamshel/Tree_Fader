@@ -2982,10 +2982,7 @@ void ConfigureOscillator(void)
 # 37
 OSCCON = 0b01011010;
 
-
-
-
 while(OSCSTATbits.HFIOFR != 1);
 
-# 50
+# 45
 }

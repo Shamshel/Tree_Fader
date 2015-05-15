@@ -36,12 +36,7 @@ void ConfigureOscillator(void)
     //set HF oscillator to intosc, 1MHz
     OSCCON = 0b01011010;
 
-    //set MF intosc, 500kHz
-    //OSCCON = 0b0011110;
-
     while(OSCSTATbits.HFIOFR != 1);
-
-    //while(OSCSTATbits.MFIOFR != 1);
 
     /* Typical actions in this function are to tweak the oscillator tuning
     register, select new clock sources, and to wait until new clock sources

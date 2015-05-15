@@ -50,16 +50,39 @@ void main(void)
     while(1)
     {
         //check RA0 for comparator output (1 is solar panel off)
-        if(false)
+        //charging (in sunlight)
+        if(RA0 == 0)
         {
             PORTAbits.RA5 = 0;
             PORTAbits.RA4 = 0;
             PORTAbits.RA2 = 0;
 
+            //switch to lower clock frequency to save power
+            //50 uA/MHz @ 1.8V, typical -> 5e-8 A/kHz
+            //set MF intosc, 125kHz (6e-6 A @ 1.8V)
+            if(OSCCON != 0b01000000)
+            {
+                OSCCON = 0b01000000;
+
+                //wait for MF startup and stable
+                while(OSCSTATbits.MFIOFR != 1);
+
+            }
+
         }
 
+        //discharging (out of sunlight)
         else
         {
+            //switch to higher frequency to eliminate (minimize) fliker
+            if(OSCCON != 0b01011010)
+            {
+                OSCCON = 0b01011010;
+
+                while(OSCSTATbits.HFIOFR != 1);
+
+            }
+
             //red timer -> TMR0
             if(TMR0 > red_duty_cycle)
             {
