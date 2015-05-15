@@ -1,0 +1,143 @@
+Cmp-Mod V01 Created by CvPcb (2013-07-07 BZR 4022)-stable date = 5/14/2015 7:36:20 PM
+
+BeginCmp
+TimeStamp = /554D9CE8;
+Reference = BT1;
+ValeurCmp = BATTERY;
+IdModule  = PIN_ARRAY_2X1;
+EndCmp
+
+BeginCmp
+TimeStamp = /554D9D06;
+Reference = BT2;
+ValeurCmp = SOLAR;
+IdModule  = PIN_ARRAY_2X1;
+EndCmp
+
+BeginCmp
+TimeStamp = /554D9D22;
+Reference = D1;
+ValeurCmp = DIODE;
+IdModule  = D3;
+EndCmp
+
+BeginCmp
+TimeStamp = /554D9DA5;
+Reference = D2;
+ValeurCmp = LED;
+IdModule  = PIN_ARRAY_2X1;
+EndCmp
+
+BeginCmp
+TimeStamp = /554D9DB4;
+Reference = D3;
+ValeurCmp = LED;
+IdModule  = PIN_ARRAY_2X1;
+EndCmp
+
+BeginCmp
+TimeStamp = /554D9DC3;
+Reference = D4;
+ValeurCmp = LED;
+IdModule  = PIN_ARRAY_2X1;
+EndCmp
+
+BeginCmp
+TimeStamp = /554D9F01;
+Reference = P1;
+ValeurCmp = CONN_5;
+IdModule  = PIN_ARRAY_5x1;
+EndCmp
+
+BeginCmp
+TimeStamp = /554DA7A2;
+Reference = Q1;
+ValeurCmp = NPN;
+IdModule  = PIN_ARRAY_3X1;
+EndCmp
+
+BeginCmp
+TimeStamp = /554DA793;
+Reference = Q2;
+ValeurCmp = NPN;
+IdModule  = PIN_ARRAY_3X1;
+EndCmp
+
+BeginCmp
+TimeStamp = /554DA7B1;
+Reference = Q3;
+ValeurCmp = NPN;
+IdModule  = PIN_ARRAY_3X1;
+EndCmp
+
+BeginCmp
+TimeStamp = /554DA005;
+Reference = R1;
+ValeurCmp = 10K;
+IdModule  = R1;
+EndCmp
+
+BeginCmp
+TimeStamp = /554D9DD2;
+Reference = R2;
+ValeurCmp = 200;
+IdModule  = R1;
+EndCmp
+
+BeginCmp
+TimeStamp = /554D9DE1;
+Reference = R3;
+ValeurCmp = 200;
+IdModule  = R1;
+EndCmp
+
+BeginCmp
+TimeStamp = /554D9DF0;
+Reference = R4;
+ValeurCmp = 200;
+IdModule  = R1;
+EndCmp
+
+BeginCmp
+TimeStamp = /554DAB07;
+Reference = R5;
+ValeurCmp = 10K;
+IdModule  = R1;
+EndCmp
+
+BeginCmp
+TimeStamp = /554DAB16;
+Reference = R6;
+ValeurCmp = 10K;
+IdModule  = R1;
+EndCmp
+
+BeginCmp
+TimeStamp = /554DAB25;
+Reference = R7;
+ValeurCmp = 10K;
+IdModule  = R1;
+EndCmp
+
+BeginCmp
+TimeStamp = /55554D24;
+Reference = SW1;
+ValeurCmp = SWITCH_INV;
+IdModule  = PIN_ARRAY_3X1;
+EndCmp
+
+BeginCmp
+TimeStamp = /55554090;
+Reference = U1;
+ValeurCmp = LM393;
+IdModule  = DIP-8__300;
+EndCmp
+
+BeginCmp
+TimeStamp = /554D9CBB;
+Reference = U2;
+ValeurCmp = PIC12LF1822;
+IdModule  = DIP-8__300;
+EndCmp
+
+EndListe
